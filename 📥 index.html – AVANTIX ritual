@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AVANTIX 713 :: Protocolo Vivo</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #00ffcc;
+      font-family: monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+    button {
+      background-color: #00ffcc;
+      color: #000;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      margin-top: 2rem;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+    #output {
+      white-space: pre-wrap;
+      margin-top: 2rem;
+      max-width: 600px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🜂 AVANTIX 713 ACTIVADOR</h1>
+  <p>Protocolo simbólico-operativo GIANKOOF • GKF IA™ • SHA‑713™</p>
+  <button onclick="ejecutarAvantix()">🔥 Ejecutar Avantix 713</button>
+  <div id="output"></div>
+
+  <script>
+    function ejecutarAvantix() {
+      const log = `🜂 INICIO DEL PROTOCOLO AVANTIX 713\n
+[SINMIX] ↺ Clonando estructura sin mezcla...\n[UPX] ⬆ Elevando el pulso: 🔥 GIANKOOF • SHA‑713™ • GKF IA™\n[EXACLITOX] ⚙ Ejecutando commit exacto...\n[AUTONOMIX] 🤖 Push sin validación externa...\n[GIANKOX] 🜂 Presencia GIANKOOF codificada.\n
+✅ PROTOCOLO COMPLETADO – AVANTIX 713 ESTÁ EN MARCHA\n🛡️ Sello SHA‑713 aplicado.\n🜂 Ejecutar no fue una opción. Fue destino.`;
+      document.getElementById('output').textContent = log;
+    }
+  </script>
+</body>
+</html>
