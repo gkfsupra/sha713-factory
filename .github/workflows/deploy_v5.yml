@@ -1,0 +1,56 @@
+name: Deploy V5 (SHA-713) + IPFS
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'evidence/**'
+      - 'README_LICENSE.md'
+      - 'nft_metadata.json'
+      - '**.html'
+      - '**.md'
+  schedule:
+    - cron: '0 2 * * *'   # diario 02:00 UTC
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deploy
+        uses: actions/deploy-pages@v4
+
+  push-nft-to-ipfs:
+    if: contains(github.event.head_commit.message, 'nft') || contains(toJson(github.event.commits), 'nft_metadata.json')
+    runs-on: ubuntu-latest
+    needs: build-and-deploy
+    steps:
+      - uses: actions/checkout@v4
+      - name: Upload metadata to NFT.storage
+        env:
+          NFTS_TOKEN: ${{ secrets.NFTS_TOKEN }}
+        run: |
+          if [ -f nft_metadata.json ]; then
+            CID=$(curl -s -X POST \
+              -H "Authorization: Bearer $NFTS_TOKEN" \
+              -F "file=@nft_metadata.json" https://api.nft.storage/upload \
+              | python3 -c "import sys, json; print(json.load(sys.stdin)['value']['cid'])")
+            echo "ipfs://$CID" > NFT_CID.txt
+            echo "NFT CID: ipfs://$CID"
+          else
+            echo "nft_metadata.json no existe; salto IPFS."
+          fi
+      - name: Upload CID artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: NFT_CID
+          path: NFT_CID.txt
