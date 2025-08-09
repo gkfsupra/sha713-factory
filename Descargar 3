@@ -1,0 +1,73 @@
+name: ABM-Cantix Radar
+
+on:
+  workflow_dispatch:
+  push:
+  schedule:
+    - cron: '0 3 * * *'   # diario 03:00 UTC
+
+permissions:
+  contents: write
+
+jobs:
+  traffic-metrics:
+    name: Capture GitHub Traffic
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch traffic (views, clones, referrers)
+        id: t
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+
+            const views = await github.rest.repos.getViews({owner, repo, per: 'day'});
+            const clones = await github.rest.repos.getClones({owner, repo, per: 'day'});
+            const referrers = await github.rest.repos.getTopReferrers({owner, repo});
+
+            const payload = {
+              ts: new Date().toISOString(),
+              views: views.data,
+              clones: clones.data,
+              referrers: referrers.data
+            };
+
+            const fs = require('fs');
+            const path = `evidence/metrics`;
+            fs.mkdirSync(path, { recursive: true });
+            fs.writeFileSync(`${path}/${new Date().toISOString().slice(0,10)}.json`, JSON.stringify(payload, null, 2));
+
+      - name: Auto commit metrics
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "ci: update ABM-Cantix metrics · SHA-713"
+          file_pattern: evidence/metrics/*.json
+
+  sitemap-and-ping:
+    name: Rebuild sitemap & ping search engines
+    runs-on: ubuntu-latest
+    needs: traffic-metrics
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate sitemap (simple crawl)
+        run: |
+          mkdir -p .smap && echo "https://gkfsupra.github.io/sha713-factory/" > .smap/base.txt
+          echo "https://gkfsupra.github.io/sha713-factory/evidence" >> .smap/base.txt
+          cp .smap/base.txt sitemap_urls.txt
+          echo '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' > sitemap.xml
+          while read u; do echo "<url><loc>$u</loc></url>" >> sitemap.xml; done < sitemap_urls.txt
+          echo "</urlset>" >> sitemap.xml
+
+      - name: Commit sitemap
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "ci: refresh sitemap.xml · SHA-713"
+          file_pattern: sitemap.xml
+
+      - name: Ping Bing
+        run: |
+          curl -s "https://www.bing.com/ping?sitemap=https://gkfsupra.github.io/sha713-factory/sitemap.xml" || true

@@ -1,0 +1,15 @@
+<button id="pulse713">Pulso claro · SHA-713</button>
+<script>
+  const repoOwner = "gkfsupra";
+  const repoName  = "sha713-factory";
+  const title     = "Pulse · visitante";
+  const body      = "Auto-pulse desde landing · SHA-713";
+
+  document.getElementById('pulse713').onclick = async () => {
+    const t = prompt("Deja tu idea en 120 caracteres (opcional):","");
+    const payload = { title, body: body + (t? `\n\nNota: ${t}`:"") };
+    alert("Abre este link para registrar tu pulso (Issue). Gracias!");
+    const url = `https://github.com/${repoOwner}/${repoName}/issues/new?title=${encodeURIComponent(payload.title)}&body=${encodeURIComponent(payload.body)}`;
+    window.open(url,'_blank');
+  };
+</script>

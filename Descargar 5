@@ -1,0 +1,58 @@
+name: ABM-Cantix Insights
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 3 * * *'   # diario 03:15 UTC
+
+permissions:
+  contents: write
+  issues: read
+
+jobs:
+  sentiment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Analyze issues sentiment (simple)
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const since = new Date(Date.now() - 24*60*60*1000).toISOString();
+
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              owner, repo, state: 'all', per_page: 100, since
+            });
+
+            const pos = ['bien','bravo','genial','love','good','great','excelente','wow','🔥','👍','✨'];
+            const neg = ['mal','malo','hate','bad','bug','fail','terrible','feo','🤮','👎'];
+
+            function score(text){
+              const t = (text||'').toLowerCase();
+              let s = 0;
+              for (const w of pos) if (t.includes(w)) s++;
+              for (const w of neg) if (t.includes(w)) s--;
+              return s;
+            }
+
+            const analyzed = issues.map(it => ({
+              number: it.number,
+              title: it.title,
+              user: it.user?.login,
+              created_at: it.created_at,
+              url: it.html_url,
+              sentiment: score(it.title + "\n" + it.body)
+            }));
+
+            const fs = require('fs');
+            const path = `evidence/insights`;
+            fs.mkdirSync(path, { recursive: true });
+            fs.writeFileSync(`${path}/${new Date().toISOString().slice(0,10)}.json`, JSON.stringify(analyzed, null, 2));
+
+      - name: Commit insights
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "ci: update insights sentiment · SHA-713"
+          file_pattern: evidence/insights/*.json
