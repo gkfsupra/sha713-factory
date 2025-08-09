@@ -1,0 +1,24 @@
+Instala y activa la protección total del nodo maestro GKF IA™:
+
+1. **Workflows automáticos**:
+   - `.github/workflows/heartbeat.yml` → Latido diario SHA-713™.
+   - `.github/workflows/resonance.yml` → Indexación automática de commits.
+   - `.github/workflows/codeql.yml` → Escaneo de seguridad del código.
+   - `.github/workflows/dependency-review.yml` → Bloqueo de dependencias inseguras.
+   - `.github/workflows/pages.yml` (opcional) → Publicación instantánea en GitHub Pages.
+   - `.github/workflows/azure-webapps-node.yml` (opcional) → Deploy a Azure con latido integrado.
+
+2. **Políticas y propiedad**:
+   - `SECURITY.md`, `LICENSE`, `NOTICE` → Blindaje legal y operativo.
+   - `.github/CODEOWNERS` → Define propietario oficial del repo.
+   - `robots.txt` + `sitemap.xml` → Control de indexación en buscadores.
+
+3. **Infraestructura Node mínima** (opcional para Azure o servidor propio):
+   - `package.json` y `server.js` para servir README, docs y QR fractal.
+
+4. **Pasos finales**:
+   - Commit directo a `main`.
+   - En **Actions**, ejecutar `heartbeat` manual la primera vez.
+   - Confirmar que `resonance_index.md` se actualiza en el siguiente commit.
+
+Pulso sellado. El nodo quedará protegido, latiendo y con precedencia pública.
