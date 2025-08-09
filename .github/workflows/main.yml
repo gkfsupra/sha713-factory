@@ -1,0 +1,13 @@
+name: heartbeat
+on:
+  schedule: [{cron: "17 3 * * *"}]   # diario 03:17 UTC
+  workflow_dispatch:
+jobs:
+  beat:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Emit SHA-713 Beat
+        run: |
+          TS=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          SIG=$(printf "%s|SHA-713-GKF-HEARTBEAT" "$TS" | sha256sum | awk '{print $1}')
+          curl -s "https://gkf713.com/heartbeat?ts=$TS&sig=$SIG" || true
