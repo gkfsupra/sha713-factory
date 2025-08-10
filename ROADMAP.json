@@ -1,0 +1,21 @@
+{
+  "version": "Ω+",
+  "updated": "2025-08-10",
+  "epics": [
+    {
+      "key": "LEG-01",
+      "title": "Memory & Ownership Core",
+      "status": "active"
+    },
+    {
+      "key": "MKT-02",
+      "title": "MKT‑X Autopilot",
+      "status": "active"
+    },
+    {
+      "key": "OPS-03",
+      "title": "Symbolic‑Operational Orchestrator",
+      "status": "planning"
+    }
+  ]
+}
