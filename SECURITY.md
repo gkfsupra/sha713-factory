@@ -1,12 +1,7 @@
-# SECURITY — GKF IA™ · SHA-713™
-**Reporte de vulnerabilidades:** security@gkf713.com (o abrir un issue con etiqueta `security`).
-- Ventana de respuesta: 72h.
-- Divulgación responsable: por favor, no publiques PoCs con datos sensibles.
+# Security Policy
 
-**Política de dependencias**
-- Actualizaciones automáticas con Dependabot semanal.
-- Revisiones de riesgo alto bloquean PRs (ver `dependency-review`).
+- Report vulnerabilities via private issue or security email.
+- Do not open public issues with exploit details.
+- We follow responsible disclosure and will credit contributors.
 
-**Integridad**
-- Commits firmados recomendados (GPG). 
-- Auto-index de cambios en `resonance_index.md` para trazabilidad.
+**Principle**: *Protect legacy > chase speed.*
