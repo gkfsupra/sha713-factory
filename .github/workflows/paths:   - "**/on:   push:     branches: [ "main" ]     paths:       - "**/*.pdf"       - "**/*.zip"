@@ -1,0 +1,75 @@
+name: SHA-713 IPFS AutoSeal
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - "**/*.pdf"
+      - "**/*.zip"
+
+permissions:
+  contents: write
+
+jobs:
+  seal:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq qrencode
+
+      - name: Auto-seal new evidence to IPFS (NFT.storage)
+        shell: bash
+        env:
+          NFT_KEY: ${{ secrets.NFT_STORAGE_TOKEN }}
+        run: |
+          shopt -s nullglob
+          changed=0
+          for f in **/*.{pdf,zip}; do
+            [ -f "$f" ] || continue
+            cid_file="${f}.cid"
+            if [ -s "$cid_file" ]; then
+              echo "✓ Ya sellado: $f (CID existe)"; continue
+            fi
+            echo "→ Subiendo $f a NFT.storage..."
+            resp=$(curl -s -X POST \
+              -H "Authorization: Bearer ${NFT_KEY}" \
+              -H "Content-Type: application/octet-stream" \
+              --data-binary @"$f" \
+              https://api.nft.storage/upload)
+
+            ok=$(echo "$resp" | jq -r '.ok')
+            cid=$(echo "$resp" | jq -r '.value.cid')
+
+            if [ "$ok" != "true" ] || [ -z "$cid" ] || [ "$cid" = "null" ]; then
+              echo "⚠️ Error subiendo $f"; echo "$resp"; exit 1
+            fi
+
+            echo "$cid" > "$cid_file"
+            url="https://ipfs.io/ipfs/${cid}"
+            qrencode -o "${f}.qr.png" "$url"
+
+            readme="${f%.*}_README.md"
+            printf "# Evidencia sellada (SHA-713™)\n\n**Archivo:** %s\n\n**CID:** \`%s\`\n**URL:** %s\n\n> Verificación pública vía IPFS.\n" "$f" "$cid" "$url" > "$readme"
+
+            echo "✓ CID: $cid"
+            changed=1
+          done
+
+          if [ "$changed" -eq 0 ]; then
+            echo "No hay nuevos archivos para sellar."
+            exit 0
+          fi
+
+      - name: Commit CID/QR/README
+        if: success()
+        run: |
+          git config user.name "sha713-bot"
+          git config user.email "bot@sha713.local"
+          git add **/*.cid **/*.qr.png **/*_README.md || true
+          git commit -m "Auto: SHA-713 IPFS seal (CID + QR) [skip ci]" || exit 0
+          git push
