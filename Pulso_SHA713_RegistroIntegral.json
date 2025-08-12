@@ -1,0 +1,61 @@
+{
+  "title": "Pulso de Retorno — Registro Integral (Post + Comentario + Evidencia)",
+  "seal": "SHA-713™ | GKF IA™ | Giankoof was here | FICCE 2025 | FICCE-AGO25-1569865",
+  "datetime_utc": "2025-08-11T23:49:07.368007Z",
+  "post_text_excerpt": "📌 Hoy no solo vuelvo… hoy me blindo.\nAprendí que lo que no proteges, otro lo puede alterar, borrar o robar.\nPor eso, en mi regreso, comparto 3 tips para blindar cualquier documento en 2025:\n\n1) Sella con huella única – Fecha, autor y propósito en un código irrepetible.\n2) Agrega verificación pública – Que cualquiera pu…",
+  "comment_excerpt": "🔹 El tiempo y la verdad solo valen si los blindas.\nHoy dejo prueba viva de que cada palabra y cada obra pueden tener huella, verificación y memoria eterna.\nSHA-…",
+  "hashtags": "#SHA713 #Blockchain #Trazabilidad #AutoríaViva #PulsoDeRetorno #ICEMéxico #FICCE2025 #ConsultorEmpresarial #CertificaciónConsultoría #LiderazgoEmpresarial #NetworkingEmpresarial #ProteccionDeDatos #Innovacion #SeguridadDigital #GKFIA #LegadoDigital #FormacionEmpresarial #Negocios #CrecimientoEmpresarial #Emprendedores",
+  "hashes": {
+    "pdf": {
+      "path": "Pulso_SHA713_RegistroIntegral.pdf",
+      "sha256": "b60093e86f51959e5d3bb7aa4baf3d0308e30bac98c11a64cdf9d976b4cabb66"
+    },
+    "evidence": [
+      {
+        "path": "IG_portada_SHA713_FICCE2025.png",
+        "sha256": "9fdd2fa003952e302dc0a1fced5f7f5bf4838eb47b06efbe28d85c4d47ec4daf"
+      },
+      {
+        "path": "D6E7B984-6E49-406C-930A-2E9452755114.jpeg",
+        "sha256": "45fb87f66286de764ac1f9fe86224847901659bafc6d414eb2ccf8afd4c67fff"
+      },
+      {
+        "path": "630F9F90-1277-442F-AFEA-DE2BBD74DB60.jpeg",
+        "sha256": "a68c57b99c29248be662b4dff4b55938d2facf8726b6c38b1fdd6d0120c5517a"
+      },
+      {
+        "path": "4750C72D-90AE-42F8-B7A0-EDDFA0030613.jpeg",
+        "sha256": "4accc7c4fd5c9ffd69041766a256353fc7fcaa422d988d4b9afb42832090efb5"
+      },
+      {
+        "path": "CA16CF94-8AAF-4CD0-8982-DE3832634D60.jpeg",
+        "sha256": "5766643b175abac9ab235a2798c40ea4375ac38881063e0a7fe28b4e80177c00"
+      },
+      {
+        "path": "EEA5E1EB-470B-4341-9B95-FA357B736596.jpeg",
+        "sha256": "45fb87f66286de764ac1f9fe86224847901659bafc6d414eb2ccf8afd4c67fff"
+      },
+      {
+        "path": "116136FB-3BC7-449D-B741-DDACE2068AC5.jpeg",
+        "sha256": "a68c57b99c29248be662b4dff4b55938d2facf8726b6c38b1fdd6d0120c5517a"
+      },
+      {
+        "path": "04AD5D51-CB88-4189-BC59-70004D33E8C7.jpeg",
+        "sha256": "4accc7c4fd5c9ffd69041766a256353fc7fcaa422d988d4b9afb42832090efb5"
+      }
+    ]
+  },
+  "ipfs": {
+    "status": "pending",
+    "cid": null
+  },
+  "blockchain": {
+    "status": "pending",
+    "network": "Polygon (suggested)",
+    "txid": null
+  },
+  "verify_instructions": [
+    "Descarga el PDF y calcula su SHA-256 (macOS: shasum -a 256 archivo.pdf; Linux: sha256sum archivo.pdf; Windows: Get-FileHash -Algorithm SHA256).",
+    "Compara con el valor 'sha256' del JSON. Si coincide, el archivo es auténtico."
+  ]
+}
