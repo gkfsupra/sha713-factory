@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gkfsupra.github.io/sha713-factory/sitemap.xml

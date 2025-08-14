@@ -1,0 +1,15 @@
+{
+  "name": "SHA-713 — GKF IA",
+  "short_name": "SHA-713",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "pulso_qr.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
