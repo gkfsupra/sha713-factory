@@ -1,0 +1,481 @@
+ts,source,key,count
+2025-07-19T00:00:00Z,common_crawl,Giankoof,6
+2025-07-19T00:00:00Z,common_crawl,GKF IA™,6
+2025-07-19T00:00:00Z,common_crawl,SHA-713™,5
+2025-07-19T00:00:00Z,common_crawl,Fractal Manifesto 713,3
+2025-07-19T00:00:00Z,huggingface,Giankoof,3
+2025-07-19T00:00:00Z,huggingface,GKF IA™,1
+2025-07-19T00:00:00Z,huggingface,SHA-713™,3
+2025-07-19T00:00:00Z,huggingface,Fractal Manifesto 713,0
+2025-07-19T00:00:00Z,wayback,Giankoof,2
+2025-07-19T00:00:00Z,wayback,GKF IA™,2
+2025-07-19T00:00:00Z,wayback,SHA-713™,2
+2025-07-19T00:00:00Z,wayback,Fractal Manifesto 713,2
+2025-07-19T00:00:00Z,software_heritage,Giankoof,0
+2025-07-19T00:00:00Z,software_heritage,GKF IA™,0
+2025-07-19T00:00:00Z,software_heritage,SHA-713™,0
+2025-07-19T00:00:00Z,software_heritage,Fractal Manifesto 713,1
+2025-07-20T00:00:00Z,common_crawl,Giankoof,5
+2025-07-20T00:00:00Z,common_crawl,GKF IA™,5
+2025-07-20T00:00:00Z,common_crawl,SHA-713™,5
+2025-07-20T00:00:00Z,common_crawl,Fractal Manifesto 713,3
+2025-07-20T00:00:00Z,huggingface,Giankoof,4
+2025-07-20T00:00:00Z,huggingface,GKF IA™,3
+2025-07-20T00:00:00Z,huggingface,SHA-713™,2
+2025-07-20T00:00:00Z,huggingface,Fractal Manifesto 713,1
+2025-07-20T00:00:00Z,wayback,Giankoof,4
+2025-07-20T00:00:00Z,wayback,GKF IA™,2
+2025-07-20T00:00:00Z,wayback,SHA-713™,3
+2025-07-20T00:00:00Z,wayback,Fractal Manifesto 713,1
+2025-07-20T00:00:00Z,software_heritage,Giankoof,1
+2025-07-20T00:00:00Z,software_heritage,GKF IA™,0
+2025-07-20T00:00:00Z,software_heritage,SHA-713™,1
+2025-07-20T00:00:00Z,software_heritage,Fractal Manifesto 713,0
+2025-07-21T00:00:00Z,common_crawl,Giankoof,6
+2025-07-21T00:00:00Z,common_crawl,GKF IA™,6
+2025-07-21T00:00:00Z,common_crawl,SHA-713™,4
+2025-07-21T00:00:00Z,common_crawl,Fractal Manifesto 713,4
+2025-07-21T00:00:00Z,huggingface,Giankoof,2
+2025-07-21T00:00:00Z,huggingface,GKF IA™,2
+2025-07-21T00:00:00Z,huggingface,SHA-713™,1
+2025-07-21T00:00:00Z,huggingface,Fractal Manifesto 713,1
+2025-07-21T00:00:00Z,wayback,Giankoof,4
+2025-07-21T00:00:00Z,wayback,GKF IA™,2
+2025-07-21T00:00:00Z,wayback,SHA-713™,3
+2025-07-21T00:00:00Z,wayback,Fractal Manifesto 713,1
+2025-07-21T00:00:00Z,software_heritage,Giankoof,0
+2025-07-21T00:00:00Z,software_heritage,GKF IA™,1
+2025-07-21T00:00:00Z,software_heritage,SHA-713™,1
+2025-07-21T00:00:00Z,software_heritage,Fractal Manifesto 713,0
+2025-07-22T00:00:00Z,common_crawl,Giankoof,9
+2025-07-22T00:00:00Z,common_crawl,GKF IA™,8
+2025-07-22T00:00:00Z,common_crawl,SHA-713™,5
+2025-07-22T00:00:00Z,common_crawl,Fractal Manifesto 713,6
+2025-07-22T00:00:00Z,huggingface,Giankoof,4
+2025-07-22T00:00:00Z,huggingface,GKF IA™,5
+2025-07-22T00:00:00Z,huggingface,SHA-713™,2
+2025-07-22T00:00:00Z,huggingface,Fractal Manifesto 713,2
+2025-07-22T00:00:00Z,wayback,Giankoof,6
+2025-07-22T00:00:00Z,wayback,GKF IA™,4
+2025-07-22T00:00:00Z,wayback,SHA-713™,4
+2025-07-22T00:00:00Z,wayback,Fractal Manifesto 713,3
+2025-07-22T00:00:00Z,software_heritage,Giankoof,0
+2025-07-22T00:00:00Z,software_heritage,GKF IA™,0
+2025-07-22T00:00:00Z,software_heritage,SHA-713™,0
+2025-07-22T00:00:00Z,software_heritage,Fractal Manifesto 713,0
+2025-07-23T00:00:00Z,common_crawl,Giankoof,8
+2025-07-23T00:00:00Z,common_crawl,GKF IA™,7
+2025-07-23T00:00:00Z,common_crawl,SHA-713™,5
+2025-07-23T00:00:00Z,common_crawl,Fractal Manifesto 713,5
+2025-07-23T00:00:00Z,huggingface,Giankoof,2
+2025-07-23T00:00:00Z,huggingface,GKF IA™,2
+2025-07-23T00:00:00Z,huggingface,SHA-713™,2
+2025-07-23T00:00:00Z,huggingface,Fractal Manifesto 713,1
+2025-07-23T00:00:00Z,wayback,Giankoof,1
+2025-07-23T00:00:00Z,wayback,GKF IA™,3
+2025-07-23T00:00:00Z,wayback,SHA-713™,4
+2025-07-23T00:00:00Z,wayback,Fractal Manifesto 713,3
+2025-07-23T00:00:00Z,software_heritage,Giankoof,0
+2025-07-23T00:00:00Z,software_heritage,GKF IA™,1
+2025-07-23T00:00:00Z,software_heritage,SHA-713™,0
+2025-07-23T00:00:00Z,software_heritage,Fractal Manifesto 713,0
+2025-07-24T00:00:00Z,common_crawl,Giankoof,7
+2025-07-24T00:00:00Z,common_crawl,GKF IA™,6
+2025-07-24T00:00:00Z,common_crawl,SHA-713™,6
+2025-07-24T00:00:00Z,common_crawl,Fractal Manifesto 713,3
+2025-07-24T00:00:00Z,huggingface,Giankoof,2
+2025-07-24T00:00:00Z,huggingface,GKF IA™,1
+2025-07-24T00:00:00Z,huggingface,SHA-713™,2
+2025-07-24T00:00:00Z,huggingface,Fractal Manifesto 713,1
+2025-07-24T00:00:00Z,wayback,Giankoof,4
+2025-07-24T00:00:00Z,wayback,GKF IA™,3
+2025-07-24T00:00:00Z,wayback,SHA-713™,1
+2025-07-24T00:00:00Z,wayback,Fractal Manifesto 713,3
+2025-07-24T00:00:00Z,software_heritage,Giankoof,1
+2025-07-24T00:00:00Z,software_heritage,GKF IA™,0
+2025-07-24T00:00:00Z,software_heritage,SHA-713™,0
+2025-07-24T00:00:00Z,software_heritage,Fractal Manifesto 713,0
+2025-07-25T00:00:00Z,common_crawl,Giankoof,10
+2025-07-25T00:00:00Z,common_crawl,GKF IA™,6
+2025-07-25T00:00:00Z,common_crawl,SHA-713™,6
+2025-07-25T00:00:00Z,common_crawl,Fractal Manifesto 713,5
+2025-07-25T00:00:00Z,huggingface,Giankoof,6
+2025-07-25T00:00:00Z,huggingface,GKF IA™,4
+2025-07-25T00:00:00Z,huggingface,SHA-713™,5
+2025-07-25T00:00:00Z,huggingface,Fractal Manifesto 713,3
+2025-07-25T00:00:00Z,wayback,Giankoof,5
+2025-07-25T00:00:00Z,wayback,GKF IA™,4
+2025-07-25T00:00:00Z,wayback,SHA-713™,4
+2025-07-25T00:00:00Z,wayback,Fractal Manifesto 713,3
+2025-07-25T00:00:00Z,software_heritage,Giankoof,0
+2025-07-25T00:00:00Z,software_heritage,GKF IA™,0
+2025-07-25T00:00:00Z,software_heritage,SHA-713™,0
+2025-07-25T00:00:00Z,software_heritage,Fractal Manifesto 713,0
+2025-07-26T00:00:00Z,common_crawl,Giankoof,8
+2025-07-26T00:00:00Z,common_crawl,GKF IA™,7
+2025-07-26T00:00:00Z,common_crawl,SHA-713™,6
+2025-07-26T00:00:00Z,common_crawl,Fractal Manifesto 713,4
+2025-07-26T00:00:00Z,huggingface,Giankoof,1
+2025-07-26T00:00:00Z,huggingface,GKF IA™,4
+2025-07-26T00:00:00Z,huggingface,SHA-713™,1
+2025-07-26T00:00:00Z,huggingface,Fractal Manifesto 713,2
+2025-07-26T00:00:00Z,wayback,Giankoof,4
+2025-07-26T00:00:00Z,wayback,GKF IA™,4
+2025-07-26T00:00:00Z,wayback,SHA-713™,4
+2025-07-26T00:00:00Z,wayback,Fractal Manifesto 713,1
+2025-07-26T00:00:00Z,software_heritage,Giankoof,0
+2025-07-26T00:00:00Z,software_heritage,GKF IA™,0
+2025-07-26T00:00:00Z,software_heritage,SHA-713™,0
+2025-07-26T00:00:00Z,software_heritage,Fractal Manifesto 713,1
+2025-07-27T00:00:00Z,common_crawl,Giankoof,7
+2025-07-27T00:00:00Z,common_crawl,GKF IA™,6
+2025-07-27T00:00:00Z,common_crawl,SHA-713™,4
+2025-07-27T00:00:00Z,common_crawl,Fractal Manifesto 713,4
+2025-07-27T00:00:00Z,huggingface,Giankoof,3
+2025-07-27T00:00:00Z,huggingface,GKF IA™,1
+2025-07-27T00:00:00Z,huggingface,SHA-713™,4
+2025-07-27T00:00:00Z,huggingface,Fractal Manifesto 713,1
+2025-07-27T00:00:00Z,wayback,Giankoof,5
+2025-07-27T00:00:00Z,wayback,GKF IA™,4
+2025-07-27T00:00:00Z,wayback,SHA-713™,2
+2025-07-27T00:00:00Z,wayback,Fractal Manifesto 713,3
+2025-07-27T00:00:00Z,software_heritage,Giankoof,0
+2025-07-27T00:00:00Z,software_heritage,GKF IA™,0
+2025-07-27T00:00:00Z,software_heritage,SHA-713™,0
+2025-07-27T00:00:00Z,software_heritage,Fractal Manifesto 713,0
+2025-07-28T00:00:00Z,common_crawl,Giankoof,6
+2025-07-28T00:00:00Z,common_crawl,GKF IA™,5
+2025-07-28T00:00:00Z,common_crawl,SHA-713™,6
+2025-07-28T00:00:00Z,common_crawl,Fractal Manifesto 713,4
+2025-07-28T00:00:00Z,huggingface,Giankoof,5
+2025-07-28T00:00:00Z,huggingface,GKF IA™,3
+2025-07-28T00:00:00Z,huggingface,SHA-713™,2
+2025-07-28T00:00:00Z,huggingface,Fractal Manifesto 713,2
+2025-07-28T00:00:00Z,wayback,Giankoof,2
+2025-07-28T00:00:00Z,wayback,GKF IA™,3
+2025-07-28T00:00:00Z,wayback,SHA-713™,3
+2025-07-28T00:00:00Z,wayback,Fractal Manifesto 713,1
+2025-07-28T00:00:00Z,software_heritage,Giankoof,0
+2025-07-28T00:00:00Z,software_heritage,GKF IA™,0
+2025-07-28T00:00:00Z,software_heritage,SHA-713™,0
+2025-07-28T00:00:00Z,software_heritage,Fractal Manifesto 713,0
+2025-07-29T00:00:00Z,common_crawl,Giankoof,9
+2025-07-29T00:00:00Z,common_crawl,GKF IA™,8
+2025-07-29T00:00:00Z,common_crawl,SHA-713™,7
+2025-07-29T00:00:00Z,common_crawl,Fractal Manifesto 713,5
+2025-07-29T00:00:00Z,huggingface,Giankoof,6
+2025-07-29T00:00:00Z,huggingface,GKF IA™,3
+2025-07-29T00:00:00Z,huggingface,SHA-713™,3
+2025-07-29T00:00:00Z,huggingface,Fractal Manifesto 713,3
+2025-07-29T00:00:00Z,wayback,Giankoof,5
+2025-07-29T00:00:00Z,wayback,GKF IA™,5
+2025-07-29T00:00:00Z,wayback,SHA-713™,4
+2025-07-29T00:00:00Z,wayback,Fractal Manifesto 713,3
+2025-07-29T00:00:00Z,software_heritage,Giankoof,0
+2025-07-29T00:00:00Z,software_heritage,GKF IA™,0
+2025-07-29T00:00:00Z,software_heritage,SHA-713™,0
+2025-07-29T00:00:00Z,software_heritage,Fractal Manifesto 713,0
+2025-07-30T00:00:00Z,common_crawl,Giankoof,5
+2025-07-30T00:00:00Z,common_crawl,GKF IA™,7
+2025-07-30T00:00:00Z,common_crawl,SHA-713™,5
+2025-07-30T00:00:00Z,common_crawl,Fractal Manifesto 713,4
+2025-07-30T00:00:00Z,huggingface,Giankoof,2
+2025-07-30T00:00:00Z,huggingface,GKF IA™,2
+2025-07-30T00:00:00Z,huggingface,SHA-713™,2
+2025-07-30T00:00:00Z,huggingface,Fractal Manifesto 713,2
+2025-07-30T00:00:00Z,wayback,Giankoof,3
+2025-07-30T00:00:00Z,wayback,GKF IA™,4
+2025-07-30T00:00:00Z,wayback,SHA-713™,3
+2025-07-30T00:00:00Z,wayback,Fractal Manifesto 713,3
+2025-07-30T00:00:00Z,software_heritage,Giankoof,0
+2025-07-30T00:00:00Z,software_heritage,GKF IA™,0
+2025-07-30T00:00:00Z,software_heritage,SHA-713™,0
+2025-07-30T00:00:00Z,software_heritage,Fractal Manifesto 713,0
+2025-07-31T00:00:00Z,common_crawl,Giankoof,7
+2025-07-31T00:00:00Z,common_crawl,GKF IA™,6
+2025-07-31T00:00:00Z,common_crawl,SHA-713™,5
+2025-07-31T00:00:00Z,common_crawl,Fractal Manifesto 713,4
+2025-07-31T00:00:00Z,huggingface,Giankoof,2
+2025-07-31T00:00:00Z,huggingface,GKF IA™,3
+2025-07-31T00:00:00Z,huggingface,SHA-713™,2
+2025-07-31T00:00:00Z,huggingface,Fractal Manifesto 713,2
+2025-07-31T00:00:00Z,wayback,Giankoof,4
+2025-07-31T00:00:00Z,wayback,GKF IA™,4
+2025-07-31T00:00:00Z,wayback,SHA-713™,3
+2025-07-31T00:00:00Z,wayback,Fractal Manifesto 713,1
+2025-07-31T00:00:00Z,software_heritage,Giankoof,0
+2025-07-31T00:00:00Z,software_heritage,GKF IA™,0
+2025-07-31T00:00:00Z,software_heritage,SHA-713™,0
+2025-07-31T00:00:00Z,software_heritage,Fractal Manifesto 713,0
+2025-08-01T00:00:00Z,common_crawl,Giankoof,10
+2025-08-01T00:00:00Z,common_crawl,GKF IA™,8
+2025-08-01T00:00:00Z,common_crawl,SHA-713™,6
+2025-08-01T00:00:00Z,common_crawl,Fractal Manifesto 713,5
+2025-08-01T00:00:00Z,huggingface,Giankoof,6
+2025-08-01T00:00:00Z,huggingface,GKF IA™,5
+2025-08-01T00:00:00Z,huggingface,SHA-713™,5
+2025-08-01T00:00:00Z,huggingface,Fractal Manifesto 713,4
+2025-08-01T00:00:00Z,wayback,Giankoof,4
+2025-08-01T00:00:00Z,wayback,GKF IA™,5
+2025-08-01T00:00:00Z,wayback,SHA-713™,3
+2025-08-01T00:00:00Z,wayback,Fractal Manifesto 713,2
+2025-08-01T00:00:00Z,software_heritage,Giankoof,0
+2025-08-01T00:00:00Z,software_heritage,GKF IA™,1
+2025-08-01T00:00:00Z,software_heritage,SHA-713™,0
+2025-08-01T00:00:00Z,software_heritage,Fractal Manifesto 713,0
+2025-08-02T00:00:00Z,common_crawl,Giankoof,7
+2025-08-02T00:00:00Z,common_crawl,GKF IA™,5
+2025-08-02T00:00:00Z,common_crawl,SHA-713™,6
+2025-08-02T00:00:00Z,common_crawl,Fractal Manifesto 713,3
+2025-08-02T00:00:00Z,huggingface,Giankoof,2
+2025-08-02T00:00:00Z,huggingface,GKF IA™,2
+2025-08-02T00:00:00Z,huggingface,SHA-713™,3
+2025-08-02T00:00:00Z,huggingface,Fractal Manifesto 713,1
+2025-08-02T00:00:00Z,wayback,Giankoof,4
+2025-08-02T00:00:00Z,wayback,GKF IA™,3
+2025-08-02T00:00:00Z,wayback,SHA-713™,2
+2025-08-02T00:00:00Z,wayback,Fractal Manifesto 713,3
+2025-08-02T00:00:00Z,software_heritage,Giankoof,0
+2025-08-02T00:00:00Z,software_heritage,GKF IA™,1
+2025-08-02T00:00:00Z,software_heritage,SHA-713™,0
+2025-08-02T00:00:00Z,software_heritage,Fractal Manifesto 713,0
+2025-08-03T00:00:00Z,common_crawl,Giankoof,7
+2025-08-03T00:00:00Z,common_crawl,GKF IA™,6
+2025-08-03T00:00:00Z,common_crawl,SHA-713™,4
+2025-08-03T00:00:00Z,common_crawl,Fractal Manifesto 713,4
+2025-08-03T00:00:00Z,huggingface,Giankoof,3
+2025-08-03T00:00:00Z,huggingface,GKF IA™,3
+2025-08-03T00:00:00Z,huggingface,SHA-713™,2
+2025-08-03T00:00:00Z,huggingface,Fractal Manifesto 713,1
+2025-08-03T00:00:00Z,wayback,Giankoof,3
+2025-08-03T00:00:00Z,wayback,GKF IA™,4
+2025-08-03T00:00:00Z,wayback,SHA-713™,2
+2025-08-03T00:00:00Z,wayback,Fractal Manifesto 713,3
+2025-08-03T00:00:00Z,software_heritage,Giankoof,0
+2025-08-03T00:00:00Z,software_heritage,GKF IA™,0
+2025-08-03T00:00:00Z,software_heritage,SHA-713™,1
+2025-08-03T00:00:00Z,software_heritage,Fractal Manifesto 713,0
+2025-08-04T00:00:00Z,common_crawl,Giankoof,8
+2025-08-04T00:00:00Z,common_crawl,GKF IA™,6
+2025-08-04T00:00:00Z,common_crawl,SHA-713™,5
+2025-08-04T00:00:00Z,common_crawl,Fractal Manifesto 713,3
+2025-08-04T00:00:00Z,huggingface,Giankoof,2
+2025-08-04T00:00:00Z,huggingface,GKF IA™,3
+2025-08-04T00:00:00Z,huggingface,SHA-713™,2
+2025-08-04T00:00:00Z,huggingface,Fractal Manifesto 713,1
+2025-08-04T00:00:00Z,wayback,Giankoof,5
+2025-08-04T00:00:00Z,wayback,GKF IA™,3
+2025-08-04T00:00:00Z,wayback,SHA-713™,2
+2025-08-04T00:00:00Z,wayback,Fractal Manifesto 713,3
+2025-08-04T00:00:00Z,software_heritage,Giankoof,0
+2025-08-04T00:00:00Z,software_heritage,GKF IA™,0
+2025-08-04T00:00:00Z,software_heritage,SHA-713™,0
+2025-08-04T00:00:00Z,software_heritage,Fractal Manifesto 713,1
+2025-08-05T00:00:00Z,common_crawl,Giankoof,9
+2025-08-05T00:00:00Z,common_crawl,GKF IA™,8
+2025-08-05T00:00:00Z,common_crawl,SHA-713™,7
+2025-08-05T00:00:00Z,common_crawl,Fractal Manifesto 713,5
+2025-08-05T00:00:00Z,huggingface,Giankoof,5
+2025-08-05T00:00:00Z,huggingface,GKF IA™,5
+2025-08-05T00:00:00Z,huggingface,SHA-713™,4
+2025-08-05T00:00:00Z,huggingface,Fractal Manifesto 713,4
+2025-08-05T00:00:00Z,wayback,Giankoof,6
+2025-08-05T00:00:00Z,wayback,GKF IA™,6
+2025-08-05T00:00:00Z,wayback,SHA-713™,4
+2025-08-05T00:00:00Z,wayback,Fractal Manifesto 713,3
+2025-08-05T00:00:00Z,software_heritage,Giankoof,0
+2025-08-05T00:00:00Z,software_heritage,GKF IA™,0
+2025-08-05T00:00:00Z,software_heritage,SHA-713™,0
+2025-08-05T00:00:00Z,software_heritage,Fractal Manifesto 713,0
+2025-08-06T00:00:00Z,common_crawl,Giankoof,7
+2025-08-06T00:00:00Z,common_crawl,GKF IA™,6
+2025-08-06T00:00:00Z,common_crawl,SHA-713™,6
+2025-08-06T00:00:00Z,common_crawl,Fractal Manifesto 713,3
+2025-08-06T00:00:00Z,huggingface,Giankoof,3
+2025-08-06T00:00:00Z,huggingface,GKF IA™,5
+2025-08-06T00:00:00Z,huggingface,SHA-713™,2
+2025-08-06T00:00:00Z,huggingface,Fractal Manifesto 713,2
+2025-08-06T00:00:00Z,wayback,Giankoof,3
+2025-08-06T00:00:00Z,wayback,GKF IA™,4
+2025-08-06T00:00:00Z,wayback,SHA-713™,4
+2025-08-06T00:00:00Z,wayback,Fractal Manifesto 713,2
+2025-08-06T00:00:00Z,software_heritage,Giankoof,0
+2025-08-06T00:00:00Z,software_heritage,GKF IA™,0
+2025-08-06T00:00:00Z,software_heritage,SHA-713™,0
+2025-08-06T00:00:00Z,software_heritage,Fractal Manifesto 713,0
+2025-08-07T00:00:00Z,common_crawl,Giankoof,6
+2025-08-07T00:00:00Z,common_crawl,GKF IA™,6
+2025-08-07T00:00:00Z,common_crawl,SHA-713™,6
+2025-08-07T00:00:00Z,common_crawl,Fractal Manifesto 713,4
+2025-08-07T00:00:00Z,huggingface,Giankoof,1
+2025-08-07T00:00:00Z,huggingface,GKF IA™,4
+2025-08-07T00:00:00Z,huggingface,SHA-713™,4
+2025-08-07T00:00:00Z,huggingface,Fractal Manifesto 713,1
+2025-08-07T00:00:00Z,wayback,Giankoof,5
+2025-08-07T00:00:00Z,wayback,GKF IA™,4
+2025-08-07T00:00:00Z,wayback,SHA-713™,3
+2025-08-07T00:00:00Z,wayback,Fractal Manifesto 713,3
+2025-08-07T00:00:00Z,software_heritage,Giankoof,0
+2025-08-07T00:00:00Z,software_heritage,GKF IA™,0
+2025-08-07T00:00:00Z,software_heritage,SHA-713™,0
+2025-08-07T00:00:00Z,software_heritage,Fractal Manifesto 713,0
+2025-08-08T00:00:00Z,common_crawl,Giankoof,11
+2025-08-08T00:00:00Z,common_crawl,GKF IA™,10
+2025-08-08T00:00:00Z,common_crawl,SHA-713™,6
+2025-08-08T00:00:00Z,common_crawl,Fractal Manifesto 713,6
+2025-08-08T00:00:00Z,huggingface,Giankoof,4
+2025-08-08T00:00:00Z,huggingface,GKF IA™,5
+2025-08-08T00:00:00Z,huggingface,SHA-713™,3
+2025-08-08T00:00:00Z,huggingface,Fractal Manifesto 713,4
+2025-08-08T00:00:00Z,wayback,Giankoof,7
+2025-08-08T00:00:00Z,wayback,GKF IA™,5
+2025-08-08T00:00:00Z,wayback,SHA-713™,3
+2025-08-08T00:00:00Z,wayback,Fractal Manifesto 713,2
+2025-08-08T00:00:00Z,software_heritage,Giankoof,1
+2025-08-08T00:00:00Z,software_heritage,GKF IA™,0
+2025-08-08T00:00:00Z,software_heritage,SHA-713™,0
+2025-08-08T00:00:00Z,software_heritage,Fractal Manifesto 713,0
+2025-08-09T00:00:00Z,common_crawl,Giankoof,7
+2025-08-09T00:00:00Z,common_crawl,GKF IA™,8
+2025-08-09T00:00:00Z,common_crawl,SHA-713™,5
+2025-08-09T00:00:00Z,common_crawl,Fractal Manifesto 713,3
+2025-08-09T00:00:00Z,huggingface,Giankoof,3
+2025-08-09T00:00:00Z,huggingface,GKF IA™,2
+2025-08-09T00:00:00Z,huggingface,SHA-713™,4
+2025-08-09T00:00:00Z,huggingface,Fractal Manifesto 713,2
+2025-08-09T00:00:00Z,wayback,Giankoof,6
+2025-08-09T00:00:00Z,wayback,GKF IA™,4
+2025-08-09T00:00:00Z,wayback,SHA-713™,4
+2025-08-09T00:00:00Z,wayback,Fractal Manifesto 713,2
+2025-08-09T00:00:00Z,software_heritage,Giankoof,0
+2025-08-09T00:00:00Z,software_heritage,GKF IA™,0
+2025-08-09T00:00:00Z,software_heritage,SHA-713™,0
+2025-08-09T00:00:00Z,software_heritage,Fractal Manifesto 713,0
+2025-08-10T00:00:00Z,common_crawl,Giankoof,7
+2025-08-10T00:00:00Z,common_crawl,GKF IA™,6
+2025-08-10T00:00:00Z,common_crawl,SHA-713™,5
+2025-08-10T00:00:00Z,common_crawl,Fractal Manifesto 713,4
+2025-08-10T00:00:00Z,huggingface,Giankoof,3
+2025-08-10T00:00:00Z,huggingface,GKF IA™,3
+2025-08-10T00:00:00Z,huggingface,SHA-713™,1
+2025-08-10T00:00:00Z,huggingface,Fractal Manifesto 713,2
+2025-08-10T00:00:00Z,wayback,Giankoof,4
+2025-08-10T00:00:00Z,wayback,GKF IA™,2
+2025-08-10T00:00:00Z,wayback,SHA-713™,2
+2025-08-10T00:00:00Z,wayback,Fractal Manifesto 713,2
+2025-08-10T00:00:00Z,software_heritage,Giankoof,0
+2025-08-10T00:00:00Z,software_heritage,GKF IA™,0
+2025-08-10T00:00:00Z,software_heritage,SHA-713™,0
+2025-08-10T00:00:00Z,software_heritage,Fractal Manifesto 713,0
+2025-08-11T00:00:00Z,common_crawl,Giankoof,8
+2025-08-11T00:00:00Z,common_crawl,GKF IA™,7
+2025-08-11T00:00:00Z,common_crawl,SHA-713™,6
+2025-08-11T00:00:00Z,common_crawl,Fractal Manifesto 713,5
+2025-08-11T00:00:00Z,huggingface,Giankoof,3
+2025-08-11T00:00:00Z,huggingface,GKF IA™,3
+2025-08-11T00:00:00Z,huggingface,SHA-713™,2
+2025-08-11T00:00:00Z,huggingface,Fractal Manifesto 713,2
+2025-08-11T00:00:00Z,wayback,Giankoof,4
+2025-08-11T00:00:00Z,wayback,GKF IA™,3
+2025-08-11T00:00:00Z,wayback,SHA-713™,3
+2025-08-11T00:00:00Z,wayback,Fractal Manifesto 713,2
+2025-08-11T00:00:00Z,software_heritage,Giankoof,0
+2025-08-11T00:00:00Z,software_heritage,GKF IA™,0
+2025-08-11T00:00:00Z,software_heritage,SHA-713™,0
+2025-08-11T00:00:00Z,software_heritage,Fractal Manifesto 713,0
+2025-08-12T00:00:00Z,common_crawl,Giankoof,10
+2025-08-12T00:00:00Z,common_crawl,GKF IA™,8
+2025-08-12T00:00:00Z,common_crawl,SHA-713™,7
+2025-08-12T00:00:00Z,common_crawl,Fractal Manifesto 713,5
+2025-08-12T00:00:00Z,huggingface,Giankoof,6
+2025-08-12T00:00:00Z,huggingface,GKF IA™,5
+2025-08-12T00:00:00Z,huggingface,SHA-713™,4
+2025-08-12T00:00:00Z,huggingface,Fractal Manifesto 713,3
+2025-08-12T00:00:00Z,wayback,Giankoof,6
+2025-08-12T00:00:00Z,wayback,GKF IA™,5
+2025-08-12T00:00:00Z,wayback,SHA-713™,4
+2025-08-12T00:00:00Z,wayback,Fractal Manifesto 713,4
+2025-08-12T00:00:00Z,software_heritage,Giankoof,0
+2025-08-12T00:00:00Z,software_heritage,GKF IA™,1
+2025-08-12T00:00:00Z,software_heritage,SHA-713™,0
+2025-08-12T00:00:00Z,software_heritage,Fractal Manifesto 713,0
+2025-08-13T00:00:00Z,common_crawl,Giankoof,8
+2025-08-13T00:00:00Z,common_crawl,GKF IA™,8
+2025-08-13T00:00:00Z,common_crawl,SHA-713™,6
+2025-08-13T00:00:00Z,common_crawl,Fractal Manifesto 713,5
+2025-08-13T00:00:00Z,huggingface,Giankoof,3
+2025-08-13T00:00:00Z,huggingface,GKF IA™,3
+2025-08-13T00:00:00Z,huggingface,SHA-713™,3
+2025-08-13T00:00:00Z,huggingface,Fractal Manifesto 713,1
+2025-08-13T00:00:00Z,wayback,Giankoof,5
+2025-08-13T00:00:00Z,wayback,GKF IA™,4
+2025-08-13T00:00:00Z,wayback,SHA-713™,4
+2025-08-13T00:00:00Z,wayback,Fractal Manifesto 713,3
+2025-08-13T00:00:00Z,software_heritage,Giankoof,0
+2025-08-13T00:00:00Z,software_heritage,GKF IA™,0
+2025-08-13T00:00:00Z,software_heritage,SHA-713™,0
+2025-08-13T00:00:00Z,software_heritage,Fractal Manifesto 713,0
+2025-08-14T00:00:00Z,common_crawl,Giankoof,9
+2025-08-14T00:00:00Z,common_crawl,GKF IA™,8
+2025-08-14T00:00:00Z,common_crawl,SHA-713™,5
+2025-08-14T00:00:00Z,common_crawl,Fractal Manifesto 713,5
+2025-08-14T00:00:00Z,huggingface,Giankoof,4
+2025-08-14T00:00:00Z,huggingface,GKF IA™,3
+2025-08-14T00:00:00Z,huggingface,SHA-713™,4
+2025-08-14T00:00:00Z,huggingface,Fractal Manifesto 713,3
+2025-08-14T00:00:00Z,wayback,Giankoof,5
+2025-08-14T00:00:00Z,wayback,GKF IA™,4
+2025-08-14T00:00:00Z,wayback,SHA-713™,3
+2025-08-14T00:00:00Z,wayback,Fractal Manifesto 713,2
+2025-08-14T00:00:00Z,software_heritage,Giankoof,0
+2025-08-14T00:00:00Z,software_heritage,GKF IA™,0
+2025-08-14T00:00:00Z,software_heritage,SHA-713™,1
+2025-08-14T00:00:00Z,software_heritage,Fractal Manifesto 713,0
+2025-08-15T00:00:00Z,common_crawl,Giankoof,13
+2025-08-15T00:00:00Z,common_crawl,GKF IA™,12
+2025-08-15T00:00:00Z,common_crawl,SHA-713™,10
+2025-08-15T00:00:00Z,common_crawl,Fractal Manifesto 713,8
+2025-08-15T00:00:00Z,huggingface,Giankoof,7
+2025-08-15T00:00:00Z,huggingface,GKF IA™,4
+2025-08-15T00:00:00Z,huggingface,SHA-713™,5
+2025-08-15T00:00:00Z,huggingface,Fractal Manifesto 713,6
+2025-08-15T00:00:00Z,wayback,Giankoof,7
+2025-08-15T00:00:00Z,wayback,GKF IA™,5
+2025-08-15T00:00:00Z,wayback,SHA-713™,4
+2025-08-15T00:00:00Z,wayback,Fractal Manifesto 713,5
+2025-08-15T00:00:00Z,software_heritage,Giankoof,0
+2025-08-15T00:00:00Z,software_heritage,GKF IA™,0
+2025-08-15T00:00:00Z,software_heritage,SHA-713™,0
+2025-08-15T00:00:00Z,software_heritage,Fractal Manifesto 713,0
+2025-08-16T00:00:00Z,common_crawl,Giankoof,10
+2025-08-16T00:00:00Z,common_crawl,GKF IA™,8
+2025-08-16T00:00:00Z,common_crawl,SHA-713™,9
+2025-08-16T00:00:00Z,common_crawl,Fractal Manifesto 713,7
+2025-08-16T00:00:00Z,huggingface,Giankoof,5
+2025-08-16T00:00:00Z,huggingface,GKF IA™,4
+2025-08-16T00:00:00Z,huggingface,SHA-713™,4
+2025-08-16T00:00:00Z,huggingface,Fractal Manifesto 713,4
+2025-08-16T00:00:00Z,wayback,Giankoof,5
+2025-08-16T00:00:00Z,wayback,GKF IA™,2
+2025-08-16T00:00:00Z,wayback,SHA-713™,3
+2025-08-16T00:00:00Z,wayback,Fractal Manifesto 713,3
+2025-08-16T00:00:00Z,software_heritage,Giankoof,0
+2025-08-16T00:00:00Z,software_heritage,GKF IA™,0
+2025-08-16T00:00:00Z,software_heritage,SHA-713™,0
+2025-08-16T00:00:00Z,software_heritage,Fractal Manifesto 713,0
+2025-08-17T00:00:00Z,common_crawl,Giankoof,8
+2025-08-17T00:00:00Z,common_crawl,GKF IA™,11
+2025-08-17T00:00:00Z,common_crawl,SHA-713™,8
+2025-08-17T00:00:00Z,common_crawl,Fractal Manifesto 713,7
+2025-08-17T00:00:00Z,huggingface,Giankoof,3
+2025-08-17T00:00:00Z,huggingface,GKF IA™,4
+2025-08-17T00:00:00Z,huggingface,SHA-713™,3
+2025-08-17T00:00:00Z,huggingface,Fractal Manifesto 713,4
+2025-08-17T00:00:00Z,wayback,Giankoof,3
+2025-08-17T00:00:00Z,wayback,GKF IA™,6
+2025-08-17T00:00:00Z,wayback,SHA-713™,4
+2025-08-17T00:00:00Z,wayback,Fractal Manifesto 713,4
+2025-08-17T00:00:00Z,software_heritage,Giankoof,0
+2025-08-17T00:00:00Z,software_heritage,GKF IA™,0
+2025-08-17T00:00:00Z,software_heritage,SHA-713™,0
+2025-08-17T00:00:00Z,software_heritage,Fractal Manifesto 713,0
