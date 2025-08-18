@@ -1,0 +1,39 @@
+<!doctype html><meta charset="utf-8">
+<title>SHA-256 / PoSE-713 — Verificador</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{--bg:#0b0b0f;--fg:#eaeaea;--gold:#d4af37;--muted:#8b8b8b;--ok:#17c964;--fail:#ff4d4f}
+  body{margin:32px;background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,Segoe UI,Roboto,Arial}
+  h1{font-weight:700;letter-spacing:.3px}
+  .gold{color:var(--gold)}
+  .card{background:#111318;border:1px solid #1f2230;border-radius:16px;padding:18px;margin:16px 0;box-shadow:0 6px 24px rgba(0,0,0,.25)}
+  label{display:block;margin:10px 0 6px;color:var(--muted)}
+  input[type="file"],input[type="url"],textarea,button{width:100%;padding:10px;border-radius:10px;border:1px solid #282b3a;background:#0f1117;color:var(--fg)}
+  textarea{min-height:120px}
+  button{cursor:pointer;background:transparent;border-color:var(--gold);color:var(--gold);font-weight:600}
+  button:hover{background:#171923}
+  pre{white-space:pre-wrap;background:#0f1117;border:1px solid #282b3a;border-radius:10px;padding:12px}
+  .pill{display:inline-block;padding:4px 10px;border-radius:999px;font-weight:700}
+  .ok{background:rgba(23,201,100,.15);color:var(--ok);border:1px solid rgba(23,201,100,.35)}
+  .fail{background:rgba(255,77,79,.15);color:var(--fail);border:1px solid rgba(255,77,79,.35)}
+  .muted{color:var(--muted)}
+</style>
+
+<h1>SHA-256 / <span class="gold">PoSE-713</span> — Verificador</h1>
+<p class="muted">No es un algoritmo nuevo. Es una <b>capa de verificación</b> sobre SHA-256 con regla <b>7-1-3</b> (7 contextos · 1 digest · 3 verificadores). Todo se valida <b>en tu navegador</b>.</p>
+
+<div class="card">
+  <label>① Sube el <b>JSON PoSE-713</b> (.json)</label>
+  <input id="jsonFile" type="file" accept="application/json">
+
+  <label>o pega el <b>JSON</b> aquí</label>
+  <textarea id="jsonText" placeholder='{"sha256":"...","nonce":"...","issued_at":"...","proof_713":"..."}'></textarea>
+  <button id="useText">Usar JSON pegado</button>
+
+  <label>o carga desde <b>URL</b> (pública)</label>
+  <input id="jsonUrl" type="url" placeholder="https://.../example_pose713.json">
+  <button id="fetchUrl">Cargar desde URL</button>
+</div>
+
+<div class="card">
+  <label>② (Opci
