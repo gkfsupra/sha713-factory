@@ -1,0 +1,14 @@
+{
+  "algo_base": "sha-256",
+  "artifact_id": "AX713-ORACULO-SUPRA-DEMO",
+  "subject": "Demo artifact (text)",
+  "issuer": "Giankoof · GKF IA™",
+  "issued_at": "2025-08-18T19:13:53Z",
+  "repo_or_url": "https://github.com/gkfsupra/sha713-factory",
+  "version": "1.0.0",
+  "notes": "PoSE-713 demo payload for local verification",
+  "sha256": "e09a1b09b615ae274f70362b7084c442d0de2970531f71716b75429da25e64ad",
+  "nonce": "121d8e01c842446a8787236d154cf3ea",
+  "proof_713": "0364b2ab177837e9432fadda79454c859b719ca0d5ef5c22afe9a3343aacb90d",
+  "author_sig": ""
+}
