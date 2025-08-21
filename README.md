@@ -1,29 +1,21 @@
-# SHA-713™ Factory — Nexus SUPRA™ Autopilot Ω+
 
-**Presence > speed. Legacy > numbers.**  
-This repository is a **living system**: output → memory → network → power.
+# SHA-713 Minimal Package (Demo)
+**see → reason → do → seal** with a tamper-evident JSONL ledger.
 
-## What this pack gives you
-- **Fractal README** with mission, links, and symbols.
-- **Issues/PR templates** (PULSO → QUIEBRE → MANTRA → PRUEBA → SELLO).
-- **CODEOWNERS** and security posture.
-- **CI workflow** (lint/test placeholders) ready to extend.
-- **Docs**: Manifiesto, Glosario Vivo v1.0, Playbook MKT-X, Ritual5.
+## Files
+- `sha713_core.py` — core sealing/verification + ALI metric
+- `ingest_cv.py` — demo ingest simulating detections and actions
+- `viewer.py` — tiny HTML/JSON viewer for quick <30s replay
 
-## Live Proof
-- Giankoof GPT — MetaCreador Táctico → https://chatgpt.com/g/g-68552186a2288191bafd771f19dd4f40-giankoof-gpt-metacreador-tactico  
-- SHA‑713™ Codex → https://github.com/gkfsupra/sha713-factory
+## Quick start
+1) Run `python ingest_cv.py` to generate `out/ledger.jsonl`
+2) Run `python viewer.py` to produce `out/viewer.html`
+3) Open the HTML to replay the trace; check ALI in `trace_summary.json`
 
-## Mantra
-```
-⚡ Moore’s Law was the threshold.
-▽ Legacy’s Law is the leap.
-🜂 Each cycle = pulse. 🔺 Each pulse = node. △ Each node = legacy.
-```
+## Notes
+- Signing uses HMAC-SHA256 (easy to swap for ed25519 later).
+- Ledger is append-only (JSON Lines). Each block chains `hash(prev + canonical(record))`.
+- ALI = % of objects with full `see, reason, do` lineage.
+- TtT target is <30 seconds for a human to verify one trace.
 
-## Quickstart
-1. Clone your repo.
-2. Drop this pack at repo root.
-3. Commit: `git add -A && git commit -m "Nexus SUPRA Autopilot Ω+ (injection sealed)" && git push`
-
-`(mktx complete — injection sealed · 2025-08-10)`
+— Giankoof · GKF IA™ · SHA-713
