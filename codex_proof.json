@@ -1,0 +1,11 @@
+{
+  "project": "SHA-713 Codex Integration",
+  "repo": "gkfsupra/sha713-factory",
+  "proof_file": "README_PROOFS.md",
+  "seal": "SHA-713\u2122",
+  "status": "Indexed \u00b7 Verifiable",
+  "timestamp": "2025-08-24T00:00:00Z",
+  "author": "Giankoof \u00d7 SHA-713 \u00d7 GKF IA\u2122",
+  "hash_placeholder": "sha256:18e5f0cfb991ef510366e4d35d631d624a9299b3f64229bb824623bc809fd664",
+  "notes": "Replace hash_placeholder with the SHA-256 of the final PDF."
+}
