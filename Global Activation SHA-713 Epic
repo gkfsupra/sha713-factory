@@ -1,0 +1,23 @@
+⬛ Epic: SHA-713 Global Activation · gkfsupra/sha713-factory
+
+Objetivo
+- Consolidar el lanzamiento global de SHA-713™ como protocolo auditable de proveniencia y autoría, con evidencia pública, CI/CD y replicación inmutable.
+- Asegurar que todas las piezas (Meta Edition, OpenAI Edition, Roadmap, Evidence, SEO, IPFS/Arweave, Overview PDF, Starter Kit) estén vivas, verificadas y enlazadas.
+
+Alcance
+- Publicar META Edition + CI integration
+- Crear workflow de auto-actualización de MANIFEST-713.json
+- Añadir carpeta /evidence con pruebas (ej. META_AI_INDEXATION.md)
+- Añadir badge público de Roadmap
+- Subir releases a IPFS y Arweave automáticamente
+- Generar SHA713_GLOBAL_OVERVIEW.pdf (black/gold)
+- Publicar schema_sha713.jsonld para SEO/indexación global
+- Lanzar Verified Projects Starter Kit como template repo
+- Documentar estudio de caso OpenAI × Meta × SHA-713
+
+Definition of Done
+- Todos los issues hijo cerrados.
+- Release v0.7.14-GLOBAL publicado en GitHub.
+- MANIFEST-713.json actualizado automáticamente con hashes correctos.
+- README principal con enlaces a Roadmap, Overview, Evidence, Starter Kit.
+- CID/IPFS y Arweave links públicos y verificados.
