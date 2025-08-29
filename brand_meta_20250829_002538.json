@@ -1,0 +1,37 @@
+{
+  "timestamp": "20250829_002538",
+  "links": {
+    "github": "https://github.com/gkfsupra",
+    "giankoof_gpt": "https://chatgpt.com/g/g-68552186a2288191bafd771f19dd4f40-giankoof-gpt-metacreador-tactico"
+  },
+  "files": [
+    {
+      "name": "qr_github_20250829_002538.png",
+      "sha256": "aeb60c65621952d61f919c8dbf49860b454cf0a63ce7bca6a50b84591ca1178c"
+    },
+    {
+      "name": "qr_github_20250829_002538.svg",
+      "sha256": "9a0ad54ec9acbbe54c8e520b816c8d367fab1150f9f6e832ebf3a43dc5e8dda0"
+    },
+    {
+      "name": "qr_giankoof_gpt_20250829_002538.png",
+      "sha256": "149be6b9263fc95a1354cfe0c2751d14dcb43aa601b3d051292d2accc5ac39eb"
+    },
+    {
+      "name": "qr_giankoof_gpt_20250829_002538.svg",
+      "sha256": "42c789ec0bb8080802926b4bd18f40bbdafc638d0175a66ba4a3eba5d5e518cd"
+    },
+    {
+      "name": "card_github_20250829_002538.png",
+      "sha256": "8b7a4764341409e6737f357585fc5f00886ad7cff7611cabdccc0362fe2e7f3c"
+    },
+    {
+      "name": "card_giankoof_gpt_20250829_002538.png",
+      "sha256": "d795d6127004234dc5f3d32d4b57f1f6974bbd91a45243664788a6c66ec979de"
+    },
+    {
+      "name": "GKF_SHA713_BrandCard_20250829_002538.pdf",
+      "sha256": "f07af31b285deb2ad19dcaa9daecd241308423dfe93394fbd7f438170cae15b8"
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SIGIL-713™ Verifier — GKF IA™ · Black/Gold</title>
+<style>
+  :root{--bg:#0a0a0a;--fg:#eaeaea;--gold:#d4af37;--muted:#888}
+  html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:1100px;margin:0 auto;padding:28px}
+  .brand{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+  .brand .dot{width:14px;height:14px;border-radius:50%;background:var(--gold);box-shadow:0 0 12px var(--gold)}
+  h1{font-size:28px;margin:0}
+  .card{border:1px solid #222;border-radius:18px;background:linear-gradient(180deg,#0d0d0d,#0a0a0a);box-shadow:0 10px 30px rgba(0,0,0,.25);padding:20px;margin:16px 0}
+  .drop{border:2px dashed #333;border-radius:16px;padding:22px;text-align:center;transition:.2s;cursor:pointer}
+  .drop:hover{border-color:var(--gold)}
+  .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;margin-top:16px}
+  .row{display:flex;gap:10px;align-items:center;margin:8px 0}
+  .pill{border:1px solid #333;color:#eee;border-radius:999px;padding:6px 10px;font-size:12px}
+  .pill.gold{border-color:var(--gold);color:var(--gold)}
+  pre{white-space:pre-wrap;word-break:break-word;background:#0d0d0d;border:1px solid #222;border-radius:12px;padding:12px;overflow:auto;font-size:12px}
+  canvas{width:100%;max-width:520px;background:#111;border:1px solid #222;border-radius:12px}
+  .ok{color:#67f58d}.warn{color:#f5d167}.bad{color:#ff6b6b}
+  button{background:var(--gold);color:#111;border:none;border-radius:10px;padding:10px 12px;font-weight:700;cursor:pointer}
+  a{color:var(--gold)}
+  .footer{margin-top:22px;font-size:12px;color:#aaa}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand"><div class="dot"></div><h1>GKF IA™ · <span style="color:var(--gold)">SIGIL‑713™ Verifier</span></h1></div>
+  <div class="card">
+    <div class="drop" id="drop">
+      <div class="row"><span class="pill gold">Arrastra</span> o <span class="pill">Selecciona</span> un <b>PNG/SVG</b> con sigil</div>
+      <input id="file" type="file" accept="image/png,image/svg+xml" style="display:none">
+      <div style="margin-top:6px;color:#bbb">Recomendado: <code>SIGIL713_github_*.png</code> o <code>SIGIL713_giankoof_gpt_*.png</code></div>
+      <div style="margin-top:10px"><button id="pick">Elegir archivo</button></div>
+    </div>
+    <div class="grid">
+      <div>
+        <h3>Resultado</h3>
+        <div id="result" class="row" style="flex-wrap:wrap;gap:8px"></div>
+        <h3>Metadatos PNG</h3>
+        <pre id="meta">—</pre>
+        <h3>Watermark LSB</h3>
+        <pre id="lsb">—</pre>
+        <h3>Payload (PAYLOAD_JSON)</h3>
+        <pre id="payload">—</pre>
+        <div class="row">
+          <button id="copy">Copiar JSON</button>
+          <button id="copyhash">Copiar SHA-256</button>
+        </div>
+      </div>
+      <div>
+        <h3>Imagen</h3>
+        <canvas id="cv" width="1024" height="1024"></canvas>
+      </div>
+    </div>
+    <div class="footer">🜂 SHA‑713™ was here · v0.1 — Negro/dorado. Si conviertes a JPG, la marca LSB podría perderse.</div>
+  </div>
+</div>
+<script>
+const drop = document.getElementById('drop');
+const fileInput = document.getElementById('file');
+const pick = document.getElementById('pick');
+const metaPre = document.getElementById('meta');
+const lsbPre = document.getElementById('lsb');
+const payloadPre = document.getElementById('payload');
+const resultDiv = document.getElementById('result');
+const canvas = document.getElementById('cv');
+const ctx = canvas.getContext('2d');
+const copyBtn = document.getElementById('copy');
+const copyHashBtn = document.getElementById('copyhash');
+
+pick.onclick = () => fileInput.click();
+drop.onclick = () => fileInput.click();
+['dragover','dragenter'].forEach(ev => drop.addEventListener(ev, e=>{e.preventDefault(); drop.style.borderColor = '#d4af37'}));
+['dragleave','drop'].forEach(ev => drop.addEventListener(ev, e=>{e.preventDefault(); drop.style.borderColor = '#333'}));
+drop.addEventListener('drop', e => handleFiles(e.dataTransfer.files));
+fileInput.addEventListener('change', e => handleFiles(e.target.files));
+
+async function handleFiles(files){
+  const f = files[0];
+  if(!f) return;
+  const buf = await f.arrayBuffer();
+  const ext = f.name.toLowerCase().endsWith('.svg') ? 'svg' : 'png';
+  clearOut();
+  if(ext==='svg'){
+    metaPre.textContent = 'SVG cargado. Buscando <metadata id="sigil713-meta">…</metadata>';
+    const text = new TextDecoder().decode(buf);
+    const m = text.match(/<metadata[^>]*id=["']sigil713-meta["'][^>]*>(.*?)<\/metadata>/s);
+    if(m){
+      metaPre.textContent = m[1];
+      try{ const o = JSON.parse(m[1]); renderPayload(o.PAYLOAD||o.payload||m[1]); } catch{}
+      addBadge('SVG metadata', 'ok');
+    }else{
+      addBadge('SVG metadata', 'bad', 'no encontrada');
+    }
+    // draw SVG to canvas (rasterize via blob + image)
+    const url = URL.createObjectURL(new Blob([buf], {type:"image/svg+xml"}));
+    const img = new Image(); img.onload=()=>{canvas.width=img.width; canvas.height=img.height; ctx.drawImage(img,0,0)}; img.src=url;
+    return;
+  }
+  // PNG: parse chunks
+  const view = new DataView(buf);
+  const sigPNG = [0x89,0x50,0x4E,0x47,0x0D,0x0A,0x1A,0x0A];
+  for(let i=0;i<8;i++){ if(view.getUint8(i)!==sigPNG[i]){ metaPre.textContent="No es PNG válido"; addBadge('PNG', 'bad'); return; } }
+  addBadge('PNG', 'ok');
+  let off = 8;
+  let textChunks = {};
+  while(off < view.byteLength){
+    const len = view.getUint32(off); off+=4;
+    const type = String.fromCharCode(view.getUint8(off),view.getUint8(off+1),view.getUint8(off+2),view.getUint8(off+3)); off+=4;
+    const data = new Uint8Array(buf, off, len); off += len;
+    const crc = view.getUint32(off); off+=4;
+    if(type==='tEXt'){
+      const zero = data.indexOf(0);
+      const key = new TextDecoder().decode(data.slice(0,zero));
+      const txt = new TextDecoder().decode(data.slice(zero+1));
+      textChunks[key] = txt;
+    }
+    if(type==='IEND') break;
+  }
+  metaPre.textContent = JSON.stringify(textChunks, null, 2);
+  if(textChunks['SIGIL713']) addBadge('SIGIL713', 'ok', textChunks['SIGIL713']);
+  else addBadge('SIGIL713', 'bad');
+  if(textChunks['SHA256']) addBadge('SHA-256 (tEXt)', 'ok', textChunks['SHA256'].slice(0,12)+'…');
+  else addBadge('SHA-256 (tEXt)', 'bad');
+  if(textChunks['PAYLOAD_JSON']){
+    try{ renderPayload(JSON.parse(textChunks['PAYLOAD_JSON'])); }
+    catch{ payloadPre.textContent = textChunks['PAYLOAD_JSON']; }
+  } else {
+    payloadPre.textContent = 'PAYLOAD_JSON no encontrado';
+  }
+  // Draw image
+  const url = URL.createObjectURL(new Blob([buf], {type:"image/png"}));
+  const img = new Image(); img.onload=()=>{
+    canvas.width=img.width; canvas.height=img.height; ctx.drawImage(img,0,0); extractLSB();
+  }; img.src=url;
+
+  // Cross-check: recompute sha256(payload) vs tEXt.SHA256
+  setTimeout(async ()=>{
+    const payloadTxt = textChunks['PAYLOAD_JSON']||"";
+    if(payloadTxt && textChunks['SHA256']){
+      const ok = await sha256Hex(payloadTxt) === textChunks['SHA256'].toLowerCase();
+      addBadge('Consenso payload↔SHA-256', ok?'ok':'bad', ok?'match':'mismatch');
+    }
+  }, 100);
+}
+
+function clearOut(){
+  resultDiv.innerHTML=''; metaPre.textContent='—'; lsbPre.textContent='—'; payloadPre.textContent='—';
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+}
+function addBadge(label, cls='ok', hint=''){
+  const el = document.createElement('span');
+  el.className='pill ' + (cls==='ok'?'gold':'');
+  el.textContent = label + (hint?(' · '+hint):'');
+  if(cls==='bad'){ el.style.borderColor='#ff6b6b'; el.style.color='#ff6b6b'; }
+  resultDiv.appendChild(el);
+}
+function renderPayload(o){
+  payloadPre.textContent = typeof o==='string' ? o : JSON.stringify(o, null, 2);
+}
+
+function extractLSB(){
+  // replicate encoder region (x0=80,y0=260, height=64 rows, width≈600)
+  const x0=80, y0=260, rows=64, cols=600;
+  const id = ctx.getImageData(0,0,canvas.width,canvas.height);
+  const d = id.data;
+  const W = canvas.width;
+  let bits=[], i=0;
+  for(let y=y0; y<y0+rows && y<canvas.height; y++){
+    for(let x=x0; x<x0+cols && x<canvas.width; x++){
+      const idx = (y*W + x)*4;
+      const r = d[idx];
+      bits.push(r & 1);
+    }
+  }
+  let out=''; for(let k=0;k<bits.length;k+=8){
+    let byte=0; for(let j=0;j<8;j++){ byte=(byte<<1)| (bits[k+j]||0); }
+    out += String.fromCharCode(byte);
+  }
+  // cleanup
+  out = out.replace(/\x00+.*$/s,''); // cut after first NUL chunk
+  lsbPre.textContent = out || '—';
+  if(out.startsWith('HASH=')){
+    addBadge('LSB watermark', 'ok', out.slice(0,12)+'…');
+  }else if(out.trim()){
+    addBadge('LSB watermark', 'warn', 'formato no estándar');
+  }else{
+    addBadge('LSB watermark', 'bad', 'no detectada');
+  }
+}
+
+async function sha256Hex(s){
+  const enc = new TextEncoder().encode(s);
+  const buf = await crypto.subtle.digest('SHA-256', enc);
+  return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+}
+
+copyBtn.onclick = async ()=>{
+  await navigator.clipboard.writeText(payloadPre.textContent.trim());
+  addBadge('Copiado payload', 'ok');
+};
+copyHashBtn.onclick = async ()=>{
+  const m = JSON.parse(metaPre.textContent||'{}');
+  const h = m['SHA256'] || '';
+  if(h){ await navigator.clipboard.writeText(h); addBadge('Copiado hash', 'ok'); }
+  else addBadge('Sin hash', 'bad');
+};
+</script>
+</body>
+</html>
