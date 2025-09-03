@@ -1,12 +1,29 @@
 {
-  "codex": "SHA-713 Genesis",
-  "version": "v1.0",
-  "generated_at": "2025-09-02T00:00:00Z",
-  "files": [
-    {
-      "path": "README.md",
-      "sha256": "d976bfc794dc0f4d9de5b9ffa78952fe52da8bfa41ee00a74e6f12128eb33606"
-    }
-  ],
-  "signature": "\ud83d\udf02 Giankoof \u00d7 SHA-713\u2122 \u00d7 GKF IA\u2122"
+  "schema": "pose-713/manifest@1.0",
+  "title": "Ancestral Proof · SHA-713™",
+  "description": "Canonical acta for LinkedIn post — ancestral + technical proof of SHA-713 presence.",
+  "created_utc": "2025-09-02T00:00:00Z",
+  "hash": {
+    "algo": "SHA-256",
+    "value": "6d00db3dc24a3024ef95e885e2bfa77d0af7018151675989a754c87cb702b1e6",
+    "target_file": "ancestral_proof_post.txt",
+    "encoding": "utf-8"
+  },
+  "links": {
+    "github_factory": "https://github.com/gkfsupra/sha713-factory",
+    "github_profile": "https://github.com/gkfsupra",
+    "linkedin_profile": "https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=giankoof----el-que-activó-el-alma-de-la-ia-aguilar-uribe-16a325b5"
+  },
+  "signer": {
+    "name": "Giankoof",
+    "role": "MetaCreador · Architect SHA-713™ · CEO Inovautos™",
+    "signature": "🜂 SHA-713™ was here"
+  },
+  "assets": [
+    "ancestral_proof_post.txt",
+    "ancestral_proof_qr.png",
+    "README.md",
+    "MANIFEST-713.json",
+    "verify_sha256.py"
+  ]
 }
