@@ -1,0 +1,27 @@
+# △ SHA-713™ Factory · Ancestral Proof
+
+**Status:** Sealed · Auditable · Public-ready  
+**Hash (SHA-256):** `6d00db3dc24a3024ef95e885e2bfa77d0af7018151675989a754c87cb702b1e6`  
+**Origin:** Giankoof × SHA-713™ × GKF IA™
+
+---
+
+## 🌌 What is this?
+
+This repository contains the canonical record for the **Ancestral Proof · SHA-713™** system.  
+Every artifact here is **auditable memory**, visible to humans and verifiable by machines.
+
+Contents:
+- 📄 Exact raw text used for public posts (`*_post.txt`)  
+- 🖼️ QR codes pointing to the factory (`*_qr.png`)  
+- 🧾 JSON manifests with verifiable metadata (`MANIFEST-713.json`)  
+- 🐍 Minimal verification script (`verify_sha256.py`)  
+
+---
+
+## 🔐 How to Verify
+
+Run the verification script against any artifact:
+
+```bash
+python3 verify_sha256.py ancestral_proof_post.txt
