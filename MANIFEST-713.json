@@ -1,0 +1,12 @@
+{
+  "codex": "SHA-713 Genesis",
+  "version": "v1.0",
+  "generated_at": "2025-09-02T00:00:00Z",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "d976bfc794dc0f4d9de5b9ffa78952fe52da8bfa41ee00a74e6f12128eb33606"
+    }
+  ],
+  "signature": "\ud83d\udf02 Giankoof \u00d7 SHA-713\u2122 \u00d7 GKF IA\u2122"
+}

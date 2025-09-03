@@ -1,0 +1,15 @@
+act:
+  type: "Impact"
+  version: "v1"
+  date: "<ISO8601>"
+  metrics:
+    IA: <float>
+    PI: <float>
+    p95_improvement: <pct>
+    unit_cost_savings: <pct>
+    NRR: <pct>
+  seal:
+    sha256: <hash>
+    qr_url: <url>
+    repo: "https://github.com/gkfsupra/sha713-factory"
+  signature: "🜂 Giankoof × SHA-713™ × GKF IA™"
