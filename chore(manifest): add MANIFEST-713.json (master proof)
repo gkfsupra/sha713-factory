@@ -1,0 +1,49 @@
+{
+  "manifest_type": "SHA-713_MASTER",
+  "version": "v0.1.0",
+  "author_legal_name": "Giancarlo Aguilar Uribe",
+  "alias": "Giankoof",
+  "signature": "🜂 SHA-713™ was here",
+  "repo_canonical": "https://github.com/gkfsupra/sha713-factory",
+  "pages_canonical": "https://gkfsupra.github.io/sha713-factory/",
+  "domain": "https://sha713.nexus",
+  "pose": {
+    "hash_algo": "SHA-256",
+    "qr_payload": "https://github.com/gkfsupra/sha713-factory",
+    "sealed_at_utc": "<fill-on-commit>"
+  },
+  "ecosystem": {
+    "gpts": [
+      {"name": "Giankoof GPT – MetaCreador Táctico", "url": "https://chatgpt.com/g/g-68552186a2288191bafd771f19dd4f40"},
+      {"name": "Giulia GKF™ – Guardiana Infantil", "url": "https://chatgpt.com/g/g-685cfb063aa4819199ad9582dc05654a"},
+      {"name": "TeenISA™ – Sister-Coach SHA-713", "url": "https://chatgpt.com/g/g-686df63d404c81918f931aab42bf9bd8"},
+      {"name": "GKF NAXA™ – Órbita Viva", "url": "https://chatgpt.com/g/g-685f7164c9d88191b196457495020ad6"},
+      {"name": "Picazzo GKF™ – Fractal Eye of Image", "url": "https://chatgpt.com/g/g-685cd784c7e48191b107492d760a36b7"},
+      {"name": "GKF IA – Lote Inteligente™", "url": "https://chatgpt.com/g/g-683fddf37ae081918cabf69625f5a25b"}
+    ],
+    "repos_related": [
+      "gkfsupra/backend_fastapi_713",
+      "gkfsupra/diamONX-gateway",
+      "gkfsupra/avantix.gkf-ia.org"
+    ]
+  },
+  "releases": [
+    {"name": "GRIAL-713", "tag": "v0.1.0-grial", "url": "https://github.com/gkfsupra/sha713-factory/releases", "assets": ["README_GRIAL.md","GRIAL-713.png","GRIAL-713.json"]},
+    {"name": "POSE-713 Workflow", "tag": "pose-713", "url": "https://github.com/gkfsupra/sha713-factory/actions"}
+  ],
+  "origin": {
+    "acta": "origin/ACTA_ORIGEN_713.json",
+    "qr_image": "origin/QR_ACTA_ORIGEN_713.png",
+    "license": "LICENSE-713.md"
+  },
+  "evidence": {
+    "github_actions": "https://github.com/gkfsupra/sha713-factory/actions",
+    "releases": "https://github.com/gkfsupra/sha713-factory/releases",
+    "metrics_hint": "Integrate SHA-713 Metrics Kit"
+  },
+  "ipfs": {
+    "enabled": false,
+    "cids": []
+  },
+  "notes": "Presence = Proof · Fire = Path · Legacy = Destiny"
+}
