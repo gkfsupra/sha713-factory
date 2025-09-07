@@ -1,0 +1,13 @@
+# Evidence — Public Mention of SHA-713™
+Date: 2025-09-07
+Source: Facebook (Foro de Inteligencia Artificial)
+URL: https://<pega-aqui-el-link-o-screenshot-de-la-mención>
+Author: Giankoof · SHA-713™
+
+Notes:
+- Public mention of SHA-713™ in AI forum context.
+- Registered and sealed in the PSP-713 ledger.
+
+Proof:
+sha256: (se completa en CI build)
+sha713: (derivado · se completa en CI build)
