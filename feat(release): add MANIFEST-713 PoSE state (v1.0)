@@ -1,0 +1,25 @@
+{
+  "bundle": "SHA-713 Public Act v1.0 — 2025-09-10",
+  "files": [
+    {
+      "path": "README_SUPRA.md",
+      "sha256": "03c26f9c1e141a92423018cd7a20c6cb330609cfff8518187e5696300ec9b9b0"
+    },
+    {
+      "path": "AX-TRACK-LINKEDIN-POST.md",
+      "sha256": "aea9f12f636fed51ce2cf4a7c9ffcd7e405c46c80e79e5790c4a308e6f9ef420"
+    },
+    {
+      "path": "POSE713_REPRO.md",
+      "sha256": "89e7ef0e48045206def3d81111c1462ff1d6deb133fbdc579371695620f72ab4"
+    },
+    {
+      "path": "QR_PAYLOAD_SHA713.txt",
+      "sha256": "3b261ada44ffd959d5057aa120fb828c4f44b051cf49f5ae8126ae4d611d79af"
+    },
+    {
+      "path": "QR_SHA713.png",
+      "sha256": "a022317435243bfc878f937d5fd95e1fc2b2541a0b376ccc808e4d79abb85b66"
+    }
+  ]
+}
