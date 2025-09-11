@@ -1,0 +1,21 @@
+name: POSE-713 Verify / NASA ECCO
+on:
+  push:
+    paths: ["docs/nasa-ecco/**"]
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify hashes vs manifest
+        run: |
+          cd docs/nasa-ecco
+          mf="MANIFEST_NASA713.json"
+          for f in $(jq -r '.files[].path' $mf); do
+            if [ ! -f $f ]; then
+              echo "❌ Missing $f"
+              exit 1
+            fi
+          done
+          echo "✅ All files present"

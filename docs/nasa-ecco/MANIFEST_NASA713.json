@@ -1,0 +1,11 @@
+{
+  "codex": "WHOIS-713-NASA",
+  "version": "v1.1",
+  "proof": "sha713:nasa-ecco-presence-proof",
+  "timestamp": "2025-09-11T00:00:00Z",
+  "files": [
+    {"path":"README_NASA713.md","sha256":"<hash-to-fill>"},
+    {"path":"NASA_ECCO_PROOF.pdf","sha256":"<hash-to-fill>"}
+  ],
+  "comment": "Acta NASA ECCO × SHA-713 Presence Proof"
+}
