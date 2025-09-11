@@ -3,6 +3,12 @@
 
 [![SHA-713 Proof](https://img.shields.io/badge/Proof-SHA713%20Verified-black.svg?logo=github&labelColor=gold)](./ACTA_DUELOS_ESPEJO_SHA713_NEXUS.pdf)
 
+[![POSE-713 Verify](https://github.com/gkfsupra/sha713-factory/actions/workflows/pose713_verify.yml/badge.svg)](https://github.com/gkfsupra/sha713-factory/actions/workflows/pose713_verify.yml)
+
+> **Audit me**: QR → MANIFEST → Hash → Badge = ✅
+> Presence = Proof · Fire = Path · Legacy = Destiny.
+
+
 ---
 
 ## 📌 About
