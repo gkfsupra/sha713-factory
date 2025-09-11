@@ -1,0 +1,30 @@
+name: POSE-713 Verify / WHOIS
+on:
+  push:
+    paths:
+      - "docs/whois-713/**"
+      - ".github/workflows/pose713_whois.yml"
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check hashes vs MANIFEST
+        run: |
+          set -e
+          cd docs/whois-713
+          mf="MANIFEST_WHOIS713.json"
+          pdf="WHOIS_713_PROOF.pdf"
+          md="README_WHOIS713.md"
+          # Verificar existencia
+          test -f "$pdf" && test -f "$md"
+          # Calcular
+          hpdf=$(sha256sum "$pdf" | awk '{print $1}')
+          hmd=$(sha256sum "$md"  | awk '{print $1}')
+          # Comparar con manifest
+          jq -e --arg hpdf "$hpdf" --arg hmd "$hmd" '
+            [.files[] | select(.path=="WHOIS_713_PROOF.pdf") | .sha256==$hpdf] | any
+            and
+            [.files[] | select(.path=="README_WHOIS713.md") | .sha256==$hmd] | any
+          ' "$mf"
