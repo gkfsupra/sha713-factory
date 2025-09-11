@@ -1,0 +1,22 @@
+name: Release · WHOIS-713
+on: { workflow_dispatch: {} }
+permissions: { contents: write }
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare dist
+        run: |
+          mkdir -p dist
+          zip -r dist/WHOIS713_RELEASE_v1.0.1.zip docs/whois-713 -x "**/.DS_Store"
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: whois-713-v1.0.1
+          name: "ACTA WHOIS-713 v1.0.1"
+          body_path: RELEASE_WHOIS713.md
+          files: |
+            dist/WHOIS713_RELEASE_v1.0.1.zip
+            docs/whois-713/WHOIS_713_PROOF.pdf
+        env: { GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} }
