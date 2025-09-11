@@ -1,0 +1,21 @@
+name: Release NASA WHOIS-713 v1.1
+on: { workflow_dispatch: {} }
+permissions: { contents: write }
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare dist
+        run: |
+          mkdir -p dist
+          zip -r dist/NASA713_RELEASE_v1.1.zip docs/nasa-ecco -x "**/.DS_Store"
+      - name: GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: whois-713-nasa-v1.1
+          name: "ACTA WHOIS-713 v1.1 (NASA ECCO)"
+          body_path: RELEASE_NASA713.md
+          files: |
+            dist/NASA713_RELEASE_v1.1.zip
+        env: { GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} }
