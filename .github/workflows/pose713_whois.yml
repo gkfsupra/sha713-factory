@@ -1,0 +1,33 @@
+name: POSE-713 Verify / WHOIS (pdf-only)
+on:
+  push:
+    paths:
+      - "docs/whois-713/**"
+      - ".github/workflows/pose713_whois.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pose713-whois
+  cancel-in-progress: true
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify PDF hash vs MANIFEST
+        run: |
+          set -e
+          cd docs/whois-713
+          mf="MANIFEST_WHOIS713.json"
+          pdf="WHOIS_713_PROOF.pdf"
+          test -f "$pdf" || (echo "❌ Falta $pdf" && exit 1)
+          hpdf=$(sha256sum "$pdf" | awk '{print $1}')
+          echo "Computed PDF hash: $hpdf"
+          need=$(jq -r '.files[] | select(.path=="WHOIS_713_PROOF.pdf") | .sha256' "$mf")
+          echo "Manifest   PDF hash: $need"
+          if [ "$hpdf" != "$need" ]; then
+            echo "❌ Hash mismatch"
+            exit 1
+          fi
+          echo "✅ PDF matches manifest · Presence = Proof"
