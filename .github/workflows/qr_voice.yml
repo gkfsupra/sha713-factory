@@ -1,0 +1,30 @@
+name: Generate QR + Voice (WHOIS-713)
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Install deps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y espeak-ng ffmpeg
+          python -m pip install --upgrade pip
+          pip install qrcode[pil]
+      - name: Generate QR + Voice
+        run: |
+          python scripts/gen_qr_voice.py
+      - name: Commit artifacts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/whois-713/qr/ docs/whois-713/voice/
+          git commit -m "chore(qr-voice): add QR payload + voice with SHA metadata" || echo "No changes"
+          git push
