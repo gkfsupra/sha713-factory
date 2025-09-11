@@ -1,0 +1,10 @@
+{
+  "codex": "WHOIS-GIANKOOF",
+  "version": "v1.0.1",
+  "proof": "sha713:whois-giankoof-bing-serp-v1",
+  "timestamp": "2025-09-10T00:00:00Z",
+  "files": [
+    {"path":"WHOIS_713_PROOF.pdf","sha256":"afc65a7612b15cc6f3a70dc6bb21c54c2081113bbd08be4b9aa2faeb4e45397e"}
+  ],
+  "comment": "WHOIS-713 PoSE manifest (pdf-only) to avoid README drift."
+}
