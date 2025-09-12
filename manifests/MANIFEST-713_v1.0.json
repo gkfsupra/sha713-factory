@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "created_utc": "2025-09-12T06:25:14Z",
+  "bundle": "SHA-713 Public Act v1.0",
+  "inputs": [{"path":"src/Acta_Publica_SHA713.md","sha256":"(fill-if-needed)"}],
+  "outputs": [{"path":"docs/Acta_Publica_SHA713.pdf","sha256":"4208063783fbda11376779a6d07a56ca915af2684dff3fa37f28cf75d45e0abe"}],
+  "model": {"name": "gpt-5.0", "build": "2025-08-xx"},
+  "decision_path": "logits_summary:…",
+  "signature": "(see dist/Acta_Publica_SHA713.pdf.asc)",
+  "log_proof": "(optional: merkle_inclusion)",
+  "notes": "Not opinion. Proof."
+}
