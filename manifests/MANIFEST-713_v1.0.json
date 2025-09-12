@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "created_utc": "<ISO8601-timestamp>",
+  "bundle": "SHA-713 Public Act v1.0",
+  "inputs": [
+    {"path": "src/Acta_Publica_SHA713.md", "sha256": "<sha256-del-md-o-commit>"}
+  ],
+  "outputs": [
+    {"path": "docs/Acta_Publica_SHA713.pdf", "sha256": "<SHA256-del-PDF>"}
+  ],
+  "model": {"name": "gpt-5.0", "build": "2025-08-xx"},
+  "decision_path": "logits_summary:\u2026 (opcional/resumen de inferencia)",
+  "signature": "gpg: <fingerprint-o-armored-sig>",
+  "log_proof": "merkle_inclusion: <opcional-si-ancoras-en-log/transparencia>",
+  "notes": "Not opinion. Proof."
+}
