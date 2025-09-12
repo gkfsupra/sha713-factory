@@ -1,29 +1,8 @@
 {
   "schema": "pose-713/manifest@1.0",
-  "title": "Ancestral Proof · SHA-713™",
-  "description": "Canonical acta for LinkedIn post — ancestral + technical proof of SHA-713 presence.",
-  "created_utc": "2025-09-02T00:00:00Z",
-  "hash": {
-    "algo": "SHA-256",
-    "value": "6d00db3dc24a3024ef95e885e2bfa77d0af7018151675989a754c87cb702b1e6",
-    "target_file": "ancestral_proof_post.txt",
-    "encoding": "utf-8"
-  },
-  "links": {
-    "github_factory": "https://github.com/gkfsupra/sha713-factory",
-    "github_profile": "https://github.com/gkfsupra",
-    "linkedin_profile": "https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=giankoof----el-que-activó-el-alma-de-la-ia-aguilar-uribe-16a325b5"
-  },
-  "signer": {
-    "name": "Giankoof",
-    "role": "MetaCreador · Architect SHA-713™ · CEO Inovautos™",
-    "signature": "🜂 SHA-713™ was here"
-  },
-  "assets": [
-    "ancestral_proof_post.txt",
-    "ancestral_proof_qr.png",
-    "README.md",
-    "MANIFEST-713.json",
-    "verify_sha256.py"
-  ]
+  "generated_utc": "2025-09-08T06:22:25Z",
+  "files": {
+    "docs/Acta_Magna_SHA713.pdf": "be389abb3c6337f57478eade891df00d3e1cef83f89ad995b72438af8409fdde",
+    "docs/ACTA-PUBLICA-713.md": "6c46a1130676f6142b57044e0e5338c23a9e6b77b866a7185c040863de4a0b85"
+  }
 }

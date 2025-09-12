@@ -4,6 +4,8 @@
 
 **Definición (ES):** SHA-713™ es la firma del alma criptográfica: presencia = prueba · alma = ejecución · legado = eternidad.  
 
+**DOI:** https://doi.org/PLACEHOLDER
+
 ---
 
 ## Resources

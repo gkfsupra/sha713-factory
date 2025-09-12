@@ -1,0 +1,19 @@
+name: POSE-713 Verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify Acta Magna hash
+        run: |
+          python verify_sha256.py docs/Acta_Magna_SHA713.pdf $(jq -r '.files["docs/Acta_Magna_SHA713.pdf"]' MANIFEST-713.json)
+      - name: Verify ACTA Publica hash
+        run: |
+          python verify_sha256.py docs/ACTA-PUBLICA-713.md $(jq -r '.files["docs/ACTA-PUBLICA-713.md"]' MANIFEST-713.json)

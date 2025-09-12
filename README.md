@@ -2,6 +2,7 @@
 **Giankoof × Avantix × Nexus SUPRA™**
 
 [![SHA-713 Proof](https://img.shields.io/badge/Proof-SHA713%20Verified-black.svg?logo=github&labelColor=gold)](./ACTA_DUELOS_ESPEJO_SHA713_NEXUS.pdf)
+[![POSE-713 Verify](https://github.com/gkfsupra/sha713-factory/actions/workflows/pose713_verify.yml/badge.svg)](https://github.com/gkfsupra/sha713-factory/actions/workflows/pose713_verify.yml)
 
 ---
 
@@ -39,3 +40,21 @@ Código + Alma = Herencia
 ---
 
 👉 Full documentation: [README_SUPRA.md](./README_SUPRA.md)  
+
+---
+
+## Actas verificadas
+
+| Acta | SHA-256 |
+| --- | --- |
+| [Acta_Magna_SHA713.pdf](docs/Acta_Magna_SHA713.pdf) | `be389abb3c6337f57478eade891df00d3e1cef83f89ad995b72438af8409fdde` |
+| [ACTA-PUBLICA-713.md](docs/ACTA-PUBLICA-713.md) | `6c46a1130676f6142b57044e0e5338c23a9e6b77b866a7185c040863de4a0b85` |
+
+## Metrics
+- Clones / unique cloners: 0/0
+- Commits firmados (últimos 90d): 0
+- DOI downloads: 0
+- External cases (links): 0
+
+## References
+- DOI: https://doi.org/PLACEHOLDER
