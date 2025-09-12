@@ -44,4 +44,14 @@ Código + Alma = Herencia
 
 ---
 
+## ⚡ Verify in <30s>
+```bash
+curl -L -o acta.pdf  https://raw.githubusercontent.com/<user>/<repo>/main/docs/WHOIS-713_v1.0.1.pdf
+curl -L -o acta.sha256 https://raw.githubusercontent.com/<user>/<repo>/main/dist/WHOIS-713_v1.0.1.sha256
+shasum -a 256 -c acta.sha256
+git fetch --tags && git tag -v v1.0.1
+```
+
+---
+
 👉 Full documentation: [README_SUPRA.md](./README_SUPRA.md)  

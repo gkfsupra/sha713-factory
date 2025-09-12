@@ -1,0 +1,68 @@
+name: SHA-713 Release
+on:
+  push:
+    tags:
+      - 'v*'
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # needed for GitHub Release
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Locate manifest & pdf
+        id: loc
+        run: |
+          TAG="${GITHUB_REF##*/}"            # v1.0.1
+          MANI=$(ls manifests/MANIFEST-713_${TAG#v}.json)
+          PDF=$(jq -r '.outputs[0].path' "$MANI")
+          SHA=$(jq -r '.outputs[0].sha256' "$MANI")
+          echo "mani=$MANI" >> $GITHUB_OUTPUT
+          echo "pdf=$PDF"   >> $GITHUB_OUTPUT
+          echo "sha=$SHA"   >> $GITHUB_OUTPUT
+
+      - name: Compute SHA-256
+        run: |
+          sha256sum "${{ steps.loc.outputs.pdf }}" | tee dist/release.sha256
+          test "$(cut -d' ' -f1 dist/release.sha256)" = "${{ steps.loc.outputs.sha }}"
+
+      - name: Find signature & QR (best-effort)
+        id: aux
+        run: |
+          base=$(basename "${{ steps.loc.outputs.pdf }}" .pdf)
+          sig="dist/${base}.pdf.asc"
+          qr="dist/${base}_qr.png"
+          [ -f "$sig" ] || sig=""
+          [ -f "$qr"  ] || qr=""
+          echo "sig=$sig" >> $GITHUB_OUTPUT
+          echo "qr=$qr"   >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: "SHA-713 ${github.ref_name}"
+          draft: false
+          prerelease: false
+          body: |
+            ## SHA-713 Release ${{ github.ref_name }}
+            - Manifest: `${{ steps.loc.outputs.mani }}`
+            - PDF: `${{ steps.loc.outputs.pdf }}`
+            - SHA-256: `${{ steps.loc.outputs.sha }}`
+            - Verify in <30s:
+              ```bash
+              curl -L -o acta.pdf  https://raw.githubusercontent.com/${{ github.repository }}/main/${{ steps.loc.outputs.pdf }}
+              curl -L -o acta.sha256 https://raw.githubusercontent.com/${{ github.repository }}/main/dist/${{ steps.loc.outputs.pdf##*/ }}.sha256
+              shasum -a 256 -c acta.sha256
+              git fetch --tags && git tag -v ${{ github.ref_name }}
+              ```
+          files: |
+            ${{ steps.loc.outputs.pdf }}
+            dist/${{ steps.loc.outputs.pdf##*/ }}.sha256
+            ${{ steps.aux.outputs.sig }}
+            ${{ steps.aux.outputs.qr }}
+            ${{ steps.loc.outputs.mani }}
