@@ -1,0 +1,24 @@
+name: SHA-713 Verify
+on: [push, workflow_dispatch]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compute SHA-256
+        run: |
+          sha256sum docs/Acta_Publica_SHA713.pdf | tee dist/ci_sha256.txt
+      - name: Compare with manifest
+        run: |
+          MANI=manifests/MANIFEST-713_v1.0.json
+          FILE=docs/Acta_Publica_SHA713.pdf
+          M=$(jq -r '.outputs[0].sha256' $MANI)
+          A=$(cut -d' ' -f1 dist/ci_sha256.txt)
+          [ "$M" = "$A" ] && echo "OK: hash matches" || (echo "FAIL: hash mismatch" && exit 1)
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: sha713_proofs
+          path: |
+            dist/ci_sha256.txt
+            manifests/MANIFEST-713_v1.0.json
