@@ -1,0 +1,17 @@
+name: SHA-713 Verify Posts
+on: [push, workflow_dispatch]
+jobs:
+  verify-posts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y jq
+      - name: Verify each MANIFEST-713 under posts
+        run: |
+          shopt -s nullglob
+          for m in manifests/posts/MANIFEST-713_*.json; do
+            pdf=$(jq -r '.outputs[0].path' "$m")
+            exp=$(jq -r '.outputs[0].sha256' "$m")
+            act=$(sha256sum "$pdf" | cut -d' ' -f1)
+            echo "$m -> $([[ $exp = $act ]] && echo OK || echo FAIL)"; [[ $exp = $act ]] || exit 1
+          done
