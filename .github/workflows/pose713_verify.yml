@@ -1,0 +1,24 @@
+name: POSE-713 Verify
+on: [push, pull_request]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify MANIFEST-713 hashes
+        run: |
+          python - << 'PY'
+import json, hashlib, pathlib, sys
+m = pathlib.Path("MANIFEST-713.json")
+data = json.loads(m.read_text(encoding="utf-8"))
+ok = True
+for f in data["files"]:
+    p = pathlib.Path(f["path"])
+    if not p.exists():
+        print("MISSING:", p); ok = False; continue
+    h = hashlib.sha256(p.read_bytes()).hexdigest()
+    print(p, "→", h, "==", f["sha256"])
+    if h != f["sha256"]:
+        ok = False
+sys.exit(0 if ok else 1)
+PY

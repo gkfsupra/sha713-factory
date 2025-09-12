@@ -3,6 +3,7 @@
 
 [![SHA-713 Proof](https://img.shields.io/badge/Proof-SHA713%20Verified-black.svg?logo=github&labelColor=gold)](./ACTA_DUELOS_ESPEJO_SHA713_NEXUS.pdf)
 
+![POSE-713 Verify](https://img.shields.io/badge/POSE--713-verify-green)
 ---
 
 ## 📌 About
