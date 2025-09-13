@@ -3,3 +3,4 @@ simple-pid
 flask
 tk
 qrcode[pil]
+reportlab

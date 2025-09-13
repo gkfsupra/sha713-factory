@@ -1,40 +1,61 @@
-name: Codex PDF + QR Generator
+name: Codex PDF + QR + README Seal
 
 on:
   push:
     branches: [ main ]
   workflow_dispatch:
 
+permissions:
+  contents: write  # necesario para autocommit
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
+      - name: Install deps
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install reportlab
           pip install qrcode[pil]
 
-      - name: Generate bilingual PDF with SHA-713 hash
+      # 1) Genera PDF bilingüe + firma
+      - name: Generate bilingual PDF
         run: |
-          python scripts/generate_pdf.py --lang en,es --sign sha256
+          python scripts/generate_pdf.py --lang en,es --sign sha256 --out output/codex.pdf
 
-      - name: Generate QR Code
+      # 2) Genera QR del PDF (ojo fractal)
+      - name: Generate QR
         run: |
           python scripts/generate_qr.py --input output/codex.pdf --output output/codex_qr.png
 
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v3
+      # 3) Actualiza README con hashes + QR
+      - name: Update README (SHA-713 table)
+        run: |
+          python scripts/update_readme.py
+          echo "Changed files:"; git status --porcelain
+
+      # 4) Auto-commit (solo si hubo cambios)
+      - name: Commit README update
+        if: ${{ success() }}
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          name: codex-output
-          path: output/
+          commit_message: "chore(sha-713): refresh verification table in README"
+          commit_user_name: "GKF-Bot 713"
+          commit_user_email: "bot@gkf.supra"
+          branch: ${{ github.ref_name }}
+          file_pattern: |
+            README.md
+            output/**
 
