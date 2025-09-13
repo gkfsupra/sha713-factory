@@ -55,3 +55,10 @@ git fetch --tags && git tag -v v1.0.1
 ---
 
 👉 Full documentation: [README_SUPRA.md](./README_SUPRA.md)  
+
+## Codex Verification
+
+| Artifact | SHA-256 | QR |
+|----------|---------|----|
+| `codex.pdf` | _Generated in workflow_ | ![Codex QR](output/codex_qr.png) |
+
