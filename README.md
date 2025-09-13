@@ -56,9 +56,11 @@ git fetch --tags && git tag -v v1.0.1
 
 👉 Full documentation: [README_SUPRA.md](./README_SUPRA.md)  
 
-## Codex Verification
+<!-- SHA713:TABLE:BEGIN -->
+## 🔒 Tabla de Verificación
 
-| Artifact | SHA-256 | QR |
-|----------|---------|----|
-| `codex.pdf` | _Generated in workflow_ | ![Codex QR](output/codex_qr.png) |
+| Archivo | SHA-256 Hash | QR |
+|---|---|---|
+| `—` | `—` | (no artifacts) |
+<!-- SHA713:TABLE:END -->
 
