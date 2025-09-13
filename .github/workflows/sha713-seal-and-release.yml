@@ -1,0 +1,92 @@
+name: SHA-713 · Seal & Release
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: write    # para autocommit y release
+
+jobs:
+  seal:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install qrcode[pil] reportlab
+
+      # 1) Genera PDF bilingüe firmado
+      - name: Generate bilingual PDF (signed)
+        run: |
+          mkdir -p output
+          python scripts/generate_pdf.py --lang en,es --sign sha256 --out output/codex.pdf
+
+      # 2) Genera QR del PDF
+      - name: Generate QR
+        run: |
+          python scripts/generate_qr.py --input output/codex.pdf --output output/codex_qr.png
+
+      # 3) Actualiza README (tabla + badge last_seal.json)
+      - name: Update README (table+badge)
+        run: |
+          python scripts/update_readme.py
+          echo "Changes:"; git status --porcelain
+
+      # 4) Autocommit si hubo cambios
+      - name: Auto-commit README/output
+        if: ${{ success() }}
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(sha-713): seal artifacts, update verification table & badge"
+          file_pattern: |
+            README.md
+            output/**
+
+      # 5) Subir artefactos del run
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: sha713-seal-${{ github.run_id }}
+          path: output/
+
+  release:
+    needs: seal
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare tag
+        id: prep
+        run: |
+          TS=$(date -u +"%Y%m%d-%H%M")
+          echo "tag=v0.7.13-seal-${TS}" >> $GITHUB_OUTPUT
+          echo "name=SHA-713 Seal ${TS}" >> $GITHUB_OUTPUT
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.prep.outputs.tag }}
+          name: ${{ steps.prep.outputs.name }}
+          body: |
+            **Proof of Symbolic Execution (SHA-713)**
+            - Bilingual PDF
+            - SHA-256 hashes
+            - QR fractal
+            - README verification table + live badge
+          files: |
+            output/codex.pdf
+            output/codex_qr.png
+            output/last_seal.json
+

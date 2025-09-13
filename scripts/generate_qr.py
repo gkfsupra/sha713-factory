@@ -1,25 +1,12 @@
-import qrcode
-import argparse
-
-
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--input", required=True, help="Archivo fuente (ej. PDF firmado)")
-    parser.add_argument("--output", required=True, help="Ruta de salida del PNG QR")
-    args = parser.parse_args()
-
-    qr = qrcode.QRCode(
-        version=1,
-        box_size=10,
-        border=5
-    )
-    qr.add_data(f"SHA-713 Proof :: {args.input}")
-    qr.make(fit=True)
-
-    img = qr.make_image(fill="black", back_color="white")
-    img.save(args.output)
-
-
-if __name__ == "__main__":
-    main()
+#!/usr/bin/env python3
+import qrcode, argparse
+p = argparse.ArgumentParser()
+p.add_argument("--input", required=True)
+p.add_argument("--output", required=True)
+args = p.parse_args()
+qr = qrcode.QRCode(version=1, box_size=10, border=4)
+qr.add_data(f"SHA-713 Proof :: {args.input}")
+qr.make(fit=True)
+qr.make_image(fill_color="black", back_color="white").save(args.output)
+print("QR generado:", args.output)
 

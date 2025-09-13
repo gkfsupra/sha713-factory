@@ -64,3 +64,5 @@ git fetch --tags && git tag -v v1.0.1
 | `—` | `—` | (no artifacts) |
 <!-- SHA713:TABLE:END -->
 
+![Last SHA-713 Seal](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gkfsupra/sha713-factory/main/output/last_seal.json)
+
