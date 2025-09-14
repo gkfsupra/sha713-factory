@@ -1,0 +1,14 @@
+name: FUO lineage check
+
+on: [push, pull_request]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - run: |
+          python3 scripts/verify_fuo_lineage.py examples/robot_sim2real.fuo.json --workdir .
