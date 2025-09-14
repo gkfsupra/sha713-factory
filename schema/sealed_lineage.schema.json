@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "sealed_lineage",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["file", "sha256", "timestamp"],
+  "properties": {
+    "file": {"type": "string"},
+    "sha256": {"type": "string", "pattern": "^[a-fA-F0-9]{64}$"},
+    "timestamp": {"type": "string", "format": "date-time"},
+    "signature": {"type": "string"},
+    "signature_url": {"type": "string", "format": "uri"}
+  }
+}
