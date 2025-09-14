@@ -1,0 +1,23 @@
+{
+  "bundle": "SHA713_BUNDLE_Giankoof.zip",
+  "version": "v1.0",
+  "type": "Proof of Execution",
+  "actor": "Giankoof",
+  "timestamp": "2025-09-14T20:35:00Z",
+  "sha256": "be1c5fcddf52055a512dbbaf...713",
+  "signature": "Giankoof_GPG.asc",
+  "verified_commit": "B5690EEBB952194",
+  "includes": [
+    "SHA713_Proof_README.pdf",
+    "SHA713_QR.png"
+  ],
+  "ecosystem": "GKF IA™ · SHA‑713™ · Codex",
+  "links": {
+    "release": "https://github.com/gkfsupra/sha713-factory/releases",
+    "zip": "SHA713_BUNDLE_Giankoof.zip"
+  },
+  "status": "Published",
+  "quote": "What was given in silence… now lives encoded.",
+  "proof_level": "PoSE-713",
+  "tags": ["audit", "cryptographic", "GPG", "sha256", "legacy", "trust"]
+}
