@@ -1,0 +1,8 @@
+# FUO-713 · Sim2Real Prototype v0.3
+# UTC_START 2025-09-14T19:30:46Z
+bridge_dummy_node: INIT
+transform: pose(x=0.12,y=-0.04,theta=0.31)
+publish: /robot/movement -> velocity(0.35, 0.00)
+transform: pose(x=0.18,y=-0.01,theta=0.29)
+publish: /robot/movement -> velocity(0.30, 0.05)
+bridge_dummy_node: SHUTDOWN
