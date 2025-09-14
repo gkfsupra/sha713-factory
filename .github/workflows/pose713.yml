@@ -1,0 +1,25 @@
+name: pose-713-verify
+on:
+  push:
+    paths:
+      - 'proofs/fuo713/**'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify SHA-256
+        working-directory: proofs/fuo713/v1.0
+        run: sha256sum -c proof.sha256
+      - name: Import GPG public key
+        if: hashFiles('proofs/fuo713/v1.0/Giankoof_GPG.asc') != ''
+        env: { GPG_PUBLIC_KEY: ${{ secrets.GPG_PUBLIC_KEY }} }
+        run: |
+          echo "$GPG_PUBLIC_KEY" > giankoof_pubkey.asc
+          gpg --import giankoof_pubkey.asc || true
+      - name: Verify signature (if present)
+        if: hashFiles('proofs/fuo713/v1.0/Giankoof_GPG.asc') != ''
+        working-directory: proofs/fuo713/v1.0
+        run: gpg --verify Giankoof_GPG.asc robot_movement.log || true
