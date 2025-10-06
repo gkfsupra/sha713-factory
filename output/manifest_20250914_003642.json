@@ -1,0 +1,34 @@
+{
+  "sha713_version": "1.0.0",
+  "timestamp": "2025-09-14T00:36:42.733468+00:00",
+  "commit_sha": "63b19ad8ab2a23ccc7d72e5b47d5a06b015d3e22",
+  "bundle": "SHA-713\u2122 Autonomous Core Proof",
+  "files": [
+    {
+      "path": "/home/runner/work/sha713-factory/sha713-factory/README.md",
+      "sha256": "530d0d05f11e4950cde232ec1cea5ae93b165e8634aa7e36d34dde43e031d385",
+      "hmac_sha256": "45b0a081803353ef1209e08f766e915b03bb3e1c653e91225573fb63381a4356",
+      "size": 1953,
+      "modified": "2025-09-14T00:32:41.576760+00:00"
+    },
+    {
+      "path": "/home/runner/work/sha713-factory/sha713-factory/LICENSE_COMMERCIAL.md",
+      "sha256": "1b8cc58a4fea1ffdc241f83cf79bdbeabc7d89522eb783ed829e1244ca0fac35",
+      "hmac_sha256": "ebfe9484d98a38fd5cb7298faf6e1073f2e3551c1c362dc046bacbaf84243997",
+      "size": 5571,
+      "modified": "2025-09-14T00:35:58.707890+00:00"
+    },
+    {
+      "path": "/home/runner/work/sha713-factory/sha713-factory/scripts/sha713_core.py",
+      "sha256": "f113cc9553ff06f63beee3314917d7e3e951e1340384119ea84ee23b4dbe4983",
+      "hmac_sha256": "866aa7810118172da26bfef7a829c6dc36b6b4e7506f942e19ac87c077708461",
+      "size": 11111,
+      "modified": "2025-09-14T00:36:36.665938+00:00"
+    }
+  ],
+  "integrity": {
+    "type": "HMAC-SHA256",
+    "proof_generated": "2025-09-14T00:36:42.733468+00:00"
+  },
+  "signature": "dfd28eee9b37c7c0f2c3aa97152fe67f147ac26d255d3a815fce933cea802fd0"
+}

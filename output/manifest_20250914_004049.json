@@ -1,0 +1,69 @@
+{
+  "sha713_version": "1.0.0",
+  "timestamp": "2025-09-14T00:40:49.219289+00:00",
+  "commit_sha": "63b19ad8ab2a23ccc7d72e5b47d5a06b015d3e22",
+  "bundle": "SHA-713\u2122 Autonomous Core Proof",
+  "files": [
+    {
+      "path": "/home/runner/work/sha713-factory/sha713-factory/README.md",
+      "sha256": "6595a4ecbc51a95bea7e5952cf988f12cd54892d4b0023880fef840271df39c5",
+      "hmac_sha256": "69f0d385f7209963c26793175c2e3a3cb237fe6dd783e22fab56a526a276a4bc",
+      "size": 7676,
+      "modified": "2025-09-14T00:40:32.684105+00:00"
+    },
+    {
+      "path": "/home/runner/work/sha713-factory/sha713-factory/LICENSE_COMMERCIAL.md",
+      "sha256": "1b8cc58a4fea1ffdc241f83cf79bdbeabc7d89522eb783ed829e1244ca0fac35",
+      "hmac_sha256": "ebfe9484d98a38fd5cb7298faf6e1073f2e3551c1c362dc046bacbaf84243997",
+      "size": 5571,
+      "modified": "2025-09-14T00:35:58.707890+00:00"
+    },
+    {
+      "path": "/home/runner/work/sha713-factory/sha713-factory/scripts/sha713_core.py",
+      "sha256": "f113cc9553ff06f63beee3314917d7e3e951e1340384119ea84ee23b4dbe4983",
+      "hmac_sha256": "866aa7810118172da26bfef7a829c6dc36b6b4e7506f942e19ac87c077708461",
+      "size": 11111,
+      "modified": "2025-09-14T00:36:36.665938+00:00"
+    },
+    {
+      "path": "/home/runner/work/sha713-factory/sha713-factory/scripts/sha713_notifications.py",
+      "sha256": "5e12bc0dde2913806ef4d5d411f2e0c662fc98d288b5eda8506b3c0ec65bd1b0",
+      "hmac_sha256": "c403958dfbc3b88552f88fa6a3534c177f874e0e58b30e74ee7c9677f843daaf",
+      "size": 14299,
+      "modified": "2025-09-14T00:35:24.636872+00:00"
+    },
+    {
+      "path": "/home/runner/work/sha713-factory/sha713-factory/scripts/sha713_dashboard.py",
+      "sha256": "ea792f0c70c673a33dec8a2b9af85ca7c2fcbb754b03aafa6ae8a9e22c24d484",
+      "hmac_sha256": "ce4975414cbf432499537f2706560fca47502705904d368d466e5d538ad690e8",
+      "size": 14919,
+      "modified": "2025-09-14T00:37:41.029009+00:00"
+    },
+    {
+      "path": "/home/runner/work/sha713-factory/sha713-factory/scripts/sha713_api.py",
+      "sha256": "195526623feca2dc9beb67c97ff066d0f02d6aa15a80a4ab5ee28695275b74aa",
+      "hmac_sha256": "b3721563004e5d800e347cbdccf72b336346f3d1eb7715f535b9d3356ef28631",
+      "size": 12827,
+      "modified": "2025-09-14T00:38:56.749062+00:00"
+    },
+    {
+      "path": "/home/runner/work/sha713-factory/sha713-factory/requirements.txt",
+      "sha256": "9648a31459a8ac0a2d324191cf6a48da7f688c7edbccbfc5a72f96653cf3b02a",
+      "hmac_sha256": "6e325ea5891aa45672aec8546d1cb10db9a9c5554ac2a9bce1214d8922378c9b",
+      "size": 58,
+      "modified": "2025-09-14T00:39:03.782064+00:00"
+    },
+    {
+      "path": "/home/runner/work/sha713-factory/sha713-factory/.github/workflows/sha713-autonomous.yml",
+      "sha256": "8090d6d3b8f2340bff8b2405da37da08b5467e6de5abafb02731daf4d8edc77c",
+      "hmac_sha256": "f76968214482819e326a0b6b5ef7d056ab173edd901151651b68eedc601a55d7",
+      "size": 8599,
+      "modified": "2025-09-14T00:38:06.013034+00:00"
+    }
+  ],
+  "integrity": {
+    "type": "HMAC-SHA256",
+    "proof_generated": "2025-09-14T00:40:49.219289+00:00"
+  },
+  "signature": "50b25124fab25ec363261d8719fadd2148c112b94492a1c79726d2cb3e909581"
+}

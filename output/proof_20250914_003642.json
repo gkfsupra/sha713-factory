@@ -1,0 +1,14 @@
+{
+  "type": "commit",
+  "timestamp": "2025-09-14T00:36:42.736226+00:00",
+  "content_hash": "213def2ce266a52c27ee73ade4983b8aea3d5334c0f210e51c103dfa2fc16095",
+  "content_hmac": "d91e7105a62c5b1a3bb6c8c8935abc286142ac6f24112b4d63c5c44c9b5d45d3",
+  "commit_sha": "63b19ad8ab2a23ccc7d72e5b47d5a06b015d3e22",
+  "autonomous": true,
+  "lineage": {
+    "origin": "SHA-713\u2122 Autonomous Core",
+    "intellectual_property": "Anchored in GitHub with timestamped, signed commits",
+    "proof_of_authorship": "HMAC + SHA-256 verifiable lineage"
+  },
+  "signature": "203170de113f235e23c018ff8c99dfa3efa7b1caaf4b7bff0b837499eb19b2e6"
+}

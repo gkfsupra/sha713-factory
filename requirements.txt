@@ -1,2 +1,6 @@
 qrcode[pil]
 reportlab
+cryptography
+requests
+pathlib
+flask
