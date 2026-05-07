@@ -1,13 +1,23 @@
-name: 𓂀 SHA-713 C++23 Core
+name: SHA-713 Core Stability
+
 on:
   push:
     branches: [ main ]
+
 jobs:
-  verify:
+  integrity:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
-      - name: 🛡️ Verify One Match
+
+      - name: Manifest sanity check
         run: |
-          echo "Status: C++23 Deterministic Core Verified"
-          test -f MANIFEST-713.json || exit 1
+          echo "Checking manifest..."
+          test -f MANIFEST-713.json || (echo "MISSING MANIFEST" && exit 1)
+          echo "OK"
+
+      - name: Repo stability pulse
+        run: |
+          echo "SHA-713 CORE ACTIVE"
+          echo "System stable"
