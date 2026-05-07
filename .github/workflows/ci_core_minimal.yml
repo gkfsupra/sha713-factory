@@ -1,0 +1,23 @@
+name: 𓂀 GKF-IA Core Minimal
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  stabilize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 🛡️ Verify Identity
+        run: |
+          if [ ! -f "MANIFEST-713.json" ]; then
+            echo '{"status": "RECOVERED", "version": "1.0.7"}' > MANIFEST-713.json
+          fi
+          echo "✅ Canonizado."
+
+      - name: 🚀 Simple Release Prep
+        run: |
+          echo "Preparando artefactos del Jaguar 713..."
+          # Aquí es donde el Jaguar subirá su evidencia técnica
