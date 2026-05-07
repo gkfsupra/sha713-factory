@@ -1,0 +1,104 @@
+milestone:
+  title: v0.1.0-origin
+  description: Origin canon + Pages + PoSE-713 + Release
+  labels:
+    - type:docs
+    - type:infra
+    - type:workflow
+    - security
+    - seo
+    - release
+    - ipfs
+    - evidence
+    - high-priority
+
+epic:
+  title: "EPIC — ORIGIN-713 (Canon + Pages + Release)"
+  body: |
+    • ES: Consolidar el origen público de SHA-713™: manifiesto maestro, licencia viva, landing ES/EN, workflows PoSE-713 y release v0.1.0-origin.
+    • EN: Consolidate the public origin of SHA-713™: master manifest, live license, ES/EN landing, PoSE-713 workflows, and v0.1.0-origin release.
+  acceptance: "All tasks below checked ✅; Pages en línea; Release publicado."
+  labels:
+    - release
+    - high-priority
+
+issues:
+  - title: "Create /origin and add ACTA_ORIGEN_713.json + README"
+    body: |
+      • Add origin/ACTA_ORIGEN_713.json (payload abajo).
+      • Add origin/README_ACTA_ORIGEN.md (payload abajo).
+    acceptance: "JSON válido; README con pasos de verificación."
+    labels: [type:docs]
+    milestone: v0.1.0-origin
+
+  - title: "Add LICENSE-713.md (live license)"
+    body: "Incluir cláusulas de atribución, integridad de sello y convivencia con MIT/CC."
+    acceptance: "Archivo en raíz; visible en repo."
+    labels: [type:docs, security]
+    milestone: v0.1.0-origin
+
+  - title: "Add / finalize MANIFEST-713.json (master)"
+    body: "Completar gpts, repos_related, releases, origin, evidence, ipfs."
+    acceptance: "JSON válido; commit con mensaje chore(manifest): add MANIFEST-713 master."
+    labels: [type:docs]
+    milestone: v0.1.0-origin
+
+  - title: "Add .github/workflows/pose713_origin.yml"
+    body: "Workflow que sella origin/ACTA_ORIGEN_713.json (hash + QR) y commitea."
+    acceptance: "Job verde al hacer push en origin/**."
+    labels: [type:workflow]
+    milestone: v0.1.0-origin
+
+  - title: "Add .github/workflows/pose713_manifest.yml"
+    body: "Calcula SHA-256 de MANIFEST-713.json y actualiza sealed_at_utc."
+    acceptance: "Job verde al modificar el MANIFEST."
+    labels: [type:workflow]
+    milestone: v0.1.0-origin
+
+  - title: "Add index.html (bilingual ES/EN + JSON-LD)"
+    body: "Publicar en Pages (ES/EN toggle), OG/Twitter metas y schema Person/Product."
+    acceptance: "Render en https://gkfsupra.github.io/sha713-factory/ (o dominio)."
+    labels: [seo, type:infra]
+    milestone: v0.1.0-origin
+
+  - title: "Add og-image.(svg|png) + origin/QR_ACTA_ORIGEN_713.png"
+    body: "Subir visual negro/dorado + QR que apunte a /origin/."
+    acceptance: "Preview correcto en redes; QR funcional."
+    labels: [type:docs, seo]
+    milestone: v0.1.0-origin
+
+  - title: "Add evidence tracker (evidence/ + workflow)"
+    body: "Hash automático a cada .png en evidence/screenshots/**; actualizar manifiesto."
+    acceptance: "Al subir screenshot → hash calculado + commit."
+    labels: [evidence, type:workflow]
+    milestone: v0.1.0-origin
+
+  - title: "Add SECURITY.md + CODEOWNERS"
+    body: "Política de reportes, dependencias pinneadas, áreas de ownership."
+    acceptance: "Archivos en raíz y .github/."
+    labels: [security]
+    milestone: v0.1.0-origin
+
+  - title: "Add IPFS/Arweave upload workflow for MANIFEST-713"
+    body: "Workflow con token secreto (WEB3_STORAGE_TOKEN) para publicar MANIFEST; guardar CID en JSON."
+    acceptance: "Job verde; CID agregado en MANIFEST-713.json."
+    labels: [ipfs, type:workflow]
+    milestone: v0.1.0-origin
+
+  - title: "Create GitHub Release v0.1.0-origin"
+    body: "Adjuntar MANIFEST-713.json, README_ACTA_ORIGEN.md, LICENSE-713.md + notas de release."
+    acceptance: "Release publicado; link en README."
+    labels: [release]
+    milestone: v0.1.0-origin
+
+  - title: "Add ROADMAP.md (ES/EN) aligned to Codex"
+    body: "Publicar épicas/tareas; marcar estado."
+    acceptance: "Archivo en raíz; enlazado desde README."
+    labels: [type:docs]
+    milestone: v0.1.0-origin
+
+  - title: "Publish Global Post — Digital Grail (ES/EN + suspense)"
+    body: "Publicar en LinkedIn/Medium con links a Pages y Release."
+    acceptance: "Post publicado con links verificados."
+    labels: []
+    milestone: v0.1.0-origin
