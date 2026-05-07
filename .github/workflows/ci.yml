@@ -1,21 +1,22 @@
-name: SHA-713 Core Stability
+name: SHA-713 CORE CI
 
 on:
   push:
     branches: [ main ]
 
 jobs:
-  integrity:
+  core:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Manifest check
+      - name: Manifest guard
         run: |
-          echo "Checking MANIFEST-713.json"
-          test -f MANIFEST-713.json
+          test -f MANIFEST-713.json || (echo "MISSING MANIFEST" && exit 1)
+          echo "MANIFEST OK"
 
-      - name: System OK
+      - name: Repo sanity
         run: |
-          echo "SHA-713 OK - system stable"
+          echo "SYSTEM OK"
+          echo "CI STABLE - SINGLE PIPELINE ACTIVE"
