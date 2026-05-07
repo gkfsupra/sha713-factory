@@ -1,0 +1,40 @@
+name: Build & Deploy MANUAL 713
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - "docs/MANUAL_COMANDOS_SHA713_v1.md"
+      - "docs/CHEATSHEET_COMMANDS_713.md"
+      - ".github/workflows/manual_pages.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Pandoc & QR
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc qrencode
+          mkdir -p out
+          pandoc docs/MANUAL_COMANDOS_SHA713_v1.md -o out/manual_713.html --metadata title="MANUAL DE COMANDOS · SHA-713"
+          pandoc docs/MANUAL_COMANDOS_SHA713_v1.md -o out/manual_713.pdf
+          pandoc docs/CHEATSHEET_COMMANDS_713.md -o out/cheatsheet_713.html --metadata title="CHEATSHEET · SHA-713"
+          sha256sum out/manual_713.pdf | awk '{print $1}' > out/sha256.txt
+          python3 - <<'PY'
+import hashlib, pathlib
+h=(pathlib.Path("out/sha256.txt").read_text()).strip()
+open("out/sha713.txt","w").write(hashlib.sha256(("713::"+h).encode()).hexdigest())
+PY
+          cat out/sha713.txt | qrencode -o out/qr_manual_713.png -s 8 -l H
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: out }
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/deploy-pages@v4
