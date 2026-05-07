@@ -1,23 +1,23 @@
-name: SHA-713 Core Stability
+name: SHA-713 Stable Core
 
 on:
   push:
     branches: [ main ]
 
 jobs:
-  integrity:
+  core:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Manifest sanity check
+      - name: Manifest validation
         run: |
-          echo "Checking manifest..."
-          test -f MANIFEST-713.json || (echo "MISSING MANIFEST" && exit 1)
-          echo "OK"
+          if [ ! -f MANIFEST-713.json ]; then
+            echo "MANIFEST MISSING"
+            exit 1
+          fi
 
-      - name: Repo stability pulse
+      - name: Repo health
         run: |
-          echo "SHA-713 CORE ACTIVE"
-          echo "System stable"
+          echo "OK - SHA-713 STABLE CORE"
