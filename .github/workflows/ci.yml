@@ -4,6 +4,10 @@ on:
   push:
     branches: [ main ]
 
+concurrency:
+  group: sha713-core
+  cancel-in-progress: true
+
 jobs:
   core:
     runs-on: ubuntu-latest
@@ -16,7 +20,7 @@ jobs:
           test -f MANIFEST-713.json || (echo "MISSING MANIFEST" && exit 1)
           echo "MANIFEST OK"
 
-      - name: Repo sanity
+      - name: System pulse
         run: |
-          echo "SYSTEM OK"
-          echo "CI STABLE - SINGLE PIPELINE ACTIVE"
+          echo "SHA-713 OK"
+          echo "CI STABLE SINGLE SOURCE ACTIVE"
