@@ -1,0 +1,11 @@
+name: SHA-713 Core Integrity
+on:
+  push:
+    branches: [ main ]
+jobs:
+  integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify Manifest
+        run: test -f MANIFEST-713.json || exit 1
